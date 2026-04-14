@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "process",
     "name": "0.24mm Draft @MyMarlin",
     "inherits": "fdm_process_marlin_common",

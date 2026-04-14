@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "machine",
     "name": "MyToolChanger 0.8 nozzle",
     "inherits": "fdm_toolchanger_common",

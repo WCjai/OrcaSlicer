@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "process",
     "name": "0.08mm Extra Fine @MyKlipper",
     "inherits": "fdm_process_klipper_common",

@@ -1,14 +1,14 @@
 <div align="center">
 
 <picture>
-  <img alt="OrcaSlicer logo" src="resources/images/OrcaSlicer.png" width="15%" height="15%">
+  <img alt="Unbound3D-slicer logo" src="resources/images/OrcaSlicer.png" width="15%" height="15%">
 </picture>
 
 <a href="https://trendshift.io/repositories/15552" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15552" alt="OrcaSlicer%2FOrcaSlicer | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/OrcaSlicer/OrcaSlicer)](https://github.com/OrcaSlicer/OrcaSlicer/stargazers) [![Build all](https://github.com/OrcaSlicer/OrcaSlicer/actions/workflows/build_all.yml/badge.svg?branch=main)](https://github.com/OrcaSlicer/OrcaSlicer/actions/workflows/build_all.yml)
 
-OrcaSlicer: an open source Next-Gen Slicing Software for Precision 3D Prints.  
+Unbound3D Slicer: an open source Next-Gen Slicing Software for Precision 3D Prints.  
 Optimize your prints with ultra-fast slicing, intelligent support generation, and seamless printer compatibility—engineered for perfection.
 <h3>
 
@@ -113,7 +113,7 @@ winget install --id=SoftFever.OrcaSlicer -e
 ## Mac
 
 1. Download the DMG for your computer: `arm64` version for Apple Silicon and `x86_64` for Intel CPU.
-2. Drag OrcaSlicer.app to Application folder.
+2. Drag Unbound3D-slicer.app to Application folder.
 3. *If you want to run a build from a PR, you also need to follow the instructions below:*
 
     <details>
@@ -127,7 +127,7 @@ winget install --id=SoftFever.OrcaSlicer -e
       Execute this command in terminal:
 
       ```shell
-      xattr -dr com.apple.quarantine /Applications/OrcaSlicer.app
+      xattr -dr com.apple.quarantine /Applications/Unbound3D-slicer.app
       ```
 
     - Option 3:
@@ -140,7 +140,7 @@ winget install --id=SoftFever.OrcaSlicer -e
 ## Linux (Ubuntu)
 
  1. If you run into trouble executing it, try this command in the terminal:
-    `chmod +x /path_to_appimage/OrcaSlicer_Linux.AppImage`
+    `chmod +x /path_to_appimage/Unbound3D-slicer_Linux.AppImage`
 
 # How to Compile
 
@@ -163,7 +163,7 @@ resolution: 0.1
 
 # Supports
 
-**OrcaSlicer** is an open-source project and I'm deeply grateful to all my sponsors and backers.  
+**Unbound3D Slicer** is an open-source project, forked from OrcaSlicer, and I'm deeply grateful to all my sponsors and backers.  
 Their generous support enables me to purchase filaments and other essential 3D printing materials for the project.  
 Thank you! :)
 
@@ -203,7 +203,7 @@ OrcaSlicer began in that same spirit, drawing from BambuStudio, PrusaSlicer, and
 The OrcaSlicer logo was designed by community member Justin Levine (@freejstnalxndr).
 
 # License
-- **OrcaSlicer** is licensed under the GNU Affero General Public License, version 3.
+- **Unbound3D Slicer** is licensed under the GNU Affero General Public License, version 3.
 - The **GNU Affero General Public License**, version 3 ensures that if you use any part of this software in any way (even behind a web server), your software must be released under the same license.
-- OrcaSlicer includes a **pressure advance calibration pattern test** adapted from Andrew Ellis' generator, which is licensed under GNU General Public License, version 3. Ellis' generator is itself adapted from a generator developed by Sineos for Marlin, which is licensed under GNU General Public License, version 3.
-- The **Bambu networking plugin** is based on non-free libraries from BambuLab. It is optional to the OrcaSlicer and provides extended functionalities for Bambulab printer users.
+- Unbound3D Slicer includes a **pressure advance calibration pattern test** adapted from Andrew Ellis' generator, which is licensed under GNU General Public License, version 3. Ellis' generator is itself adapted from a generator developed by Sineos for Marlin, which is licensed under GNU General Public License, version 3.
+- The **Bambu networking plugin** is based on non-free libraries from BambuLab. It is optional to the Unbound3D Slicer and provides extended functionalities for Bambulab printer users.

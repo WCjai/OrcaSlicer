@@ -24,5 +24,5 @@ docker run \
   -ti \
   `# Clean up after yourself` \
   --rm \
-  `# Pass all parameters from this script to the orca slicer  ENTRYPOINT binary` \
-  orcaslicer "$@"
+  `# Pass all parameters from this script to the unbound3d-slicer ENTRYPOINT binary` \
+  unbound3d-slicer "$@"

@@ -6,7 +6,7 @@ OrcaSlicer’s C++17 sources live in `src/`, split by feature modules and platfo
 ## Build, Test, and Development Commands
 Use out-of-source builds:
 - `cmake -S . -B build -DCMAKE_BUILD_TYPE=Release` configures dependencies and generates build files.
-- `cmake --build build --target OrcaSlicer --config Release` compiles the app; add `--parallel` to speed up.
+- `cmake --build build --target Unbound3D-slicer --config Release` compiles the app; add `--parallel` to speed up.
 - `cmake --build build --target tests` then `ctest --test-dir build --output-on-failure` runs automated suites.
 Platform helpers such as `build_linux.sh`, `build_release_macos.sh`, and `build_release_vs2022.bat` wrap the same flow with toolchain flags. Use `build_release_macos.sh -sx` when reproducing macOS build issues, and `scripts/DockerBuild.sh` for reproducible container builds.
 

@@ -1,0 +1,71 @@
+{
+    "adaptive_pressure_advance": [
+        "1"
+    ],
+    "compatible_printers": [],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_cooling_layer_time": [
+        "50"
+    ],
+    "fan_max_speed": [
+        "20"
+    ],
+    "fan_min_speed": [
+        "5"
+    ],
+    "filament_deretraction_speed": [
+        "10"
+    ],
+    "filament_flow_ratio": [
+        "0.99"
+    ],
+    "filament_retract_restart_extra": [
+        "0.01"
+    ],
+    "filament_retraction_length": [
+        "1"
+    ],
+    "filament_retraction_speed": [
+        "10"
+    ],
+    "filament_settings_id": [
+        "eSUN PA-CF"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "1"
+    ],
+    "filament_z_hop": [
+        "0.2"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "115"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "115"
+    ],
+    "inherits": "eSUN PA-CF black @MyKlipper 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "eSUN PA-CF",
+    "nozzle_temperature": [
+        "270"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "260"
+    ],
+    "pressure_advance": [
+        "0.038"
+    ],
+    "slow_down_layer_time": [
+        "5"
+    ],
+    "version": "2.2.0.4"
+}

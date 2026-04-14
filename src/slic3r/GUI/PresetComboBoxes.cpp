@@ -1210,10 +1210,14 @@ void PlaterPresetComboBox::update()
             //BBS: move system to the end
             if (m_type == Preset::TYPE_PRINTER) {
                 auto printer_model = preset.config.opt_string("printer_model");
-                name = from_u8(printer_model);
-                if (system_printer_models.count(printer_model) == 0) {
+                if (!printer_model.empty()) {
+                    name = from_u8(printer_model);
+                    if (system_printer_models.count(printer_model) == 0) {
+                        system_presets.emplace(name, bmp);
+                        system_printer_models.insert(printer_model);
+                    }
+                } else {
                     system_presets.emplace(name, bmp);
-                    system_printer_models.insert(printer_model);
                 }
             } else {
                 system_presets.emplace(name, bmp);

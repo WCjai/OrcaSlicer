@@ -1,0 +1,14 @@
+{
+    "brim_type": "outer_only",
+    "default_acceleration": "1000",
+    "from": "User",
+    "inherits": "0.20mm Standard @MyKlipper",
+    "inner_wall_acceleration": "800",
+    "is_custom_defined": "0",
+    "name": "flex 3d pla+",
+    "outer_wall_acceleration": "800",
+    "print_settings_id": "flex 3d pla+",
+    "top_surface_acceleration": "800",
+    "travel_acceleration": "350",
+    "version": "2.3.0.3"
+}

@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "machine",
     "name": "MyMarlin 0.4 nozzle",
     "inherits": "fdm_machine_common",

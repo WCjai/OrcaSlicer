@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#  OrcaSlicer gettext
+#  Unbound3D-slicer gettext
 #  Created by SoftFever on 27/5/23.
 #
 

@@ -3,14 +3,14 @@ if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "4.0")
 endif()
 
 #
-# This CMake project downloads, configures and builds OrcaSlicer dependencies on Unix and Windows.
+# This CMake project downloads, configures and builds Unbound3D-slicer dependencies on Unix and Windows.
 #
 # When using this script, it's recommended to perform an out-of-source build using CMake.
 #
 # All the dependencies are installed in a `destdir` directory in the root of the build directory,
 # in a traditional Unix-style prefix structure. The destdir can be used directly by CMake
-# when building OrcaSlicer - to do this, set the CMAKE_PREFIX_PATH to ${destdir}/usr/local.
-# Warning: On UNIX/Linux, you also need to set -DSLIC3R_STATIC=1 when building OrcaSlicer.
+# when building Unbound3D-slicer - to do this, set the CMAKE_PREFIX_PATH to ${destdir}/usr/local.
+# Warning: On UNIX/Linux, you also need to set -DSLIC3R_STATIC=1 when building Unbound3D-slicer.
 #
 # For better clarity of console output, it's recommended to _not_ use a parallelized build
 # for the top-level command, ie. use `make -j 1` or `ninja -j 1` to force single-threaded top-level
@@ -38,7 +38,7 @@ if(POLICY CMP0135) # DOWNLOAD_EXTRACT_TIMESTAMP
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-project(OrcaSlicer-deps)
+project(Unbound3D-slicer-deps)
 
 # Backward compatibility for old CMake versions
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux" AND CMAKE_VERSION VERSION_LESS "3.25")
@@ -116,7 +116,7 @@ set(IS_CROSS_COMPILE FALSE)
 if (APPLE)
     list(LENGTH CMAKE_OSX_ARCHITECTURES _arch_len)
     if (_arch_len GREATER 1)
-        message(FATAL_ERROR "OrcaSlicer only supports building for one architecture at a time. Please make sure only one architecture is specified in CMAKE_OSX_ARCHITECTURES")
+        message(FATAL_ERROR "Unbound3D-slicer only supports building for one architecture at a time. Please make sure only one architecture is specified in CMAKE_OSX_ARCHITECTURES")
     endif ()
     set(CMAKE_FIND_FRAMEWORK LAST)
     set(CMAKE_FIND_APPBUNDLE LAST)
@@ -140,9 +140,9 @@ endif ()
 # Slic3r compiles with a different version which will cause runtime errors.
 # option(DEP_BUILD_IGL_STATIC "Build IGL as a static library. Might cause link errors and increase binary size." OFF)
 
-message(STATUS "OrcaSlicer deps DESTDIR: ${DESTDIR} ${DESTDIR_MSG}")
-message(STATUS "OrcaSlicer download dir for source packages: ${DEP_DOWNLOAD_DIR}")
-message(STATUS "OrcaSlicer deps debug build: ${DEP_DEBUG}")
+message(STATUS "Unbound3D-slicer deps DESTDIR: ${DESTDIR} ${DESTDIR_MSG}")
+message(STATUS "Unbound3D-slicer download dir for source packages: ${DEP_DOWNLOAD_DIR}")
+message(STATUS "Unbound3D-slicer deps debug build: ${DEP_DEBUG}")
 
 find_package(Git REQUIRED)
 
@@ -154,7 +154,7 @@ if (NOT _is_multi AND NOT CMAKE_BUILD_TYPE)
     message(STATUS "Forcing CMAKE_BUILD_TYPE to Release as it was not specified.")
 endif ()
 
-function(orcaslicer_add_cmake_project projectname)
+function(unbound3d_add_cmake_project projectname)
     cmake_parse_arguments(P_ARGS "" "INSTALL_DIR;BUILD_COMMAND;INSTALL_COMMAND" "CMAKE_ARGS" ${ARGN})
 
     set(_configs_line -DCMAKE_BUILD_TYPE:STRING=${CMAKE_BUILD_TYPE})
@@ -207,7 +207,7 @@ if (NOT IS_CROSS_COMPILE OR NOT APPLE)
         # Free up space during flatpak builds to prevent running out of space during CI/CD
 
         # note for future devs: shared libs may actually create a size reduction
-        # but orcaslicer_deps tends to get really funny regarding linking after that (notably boost)
+        # but unbound3d_deps tends to get really funny regarding linking after that (notably boost)
         # so, as much as I would like to use that, it's not happening
         ExternalProject_Add_Step(dep_${projectname} free_download_space
                 DEPENDEES download # do after download
@@ -246,7 +246,7 @@ else()
 
 endif()
 
-endfunction(orcaslicer_add_cmake_project)
+endfunction(unbound3d_add_cmake_project)
 
 
 if (MSVC)

@@ -1,0 +1,17 @@
+{
+    "type": "process",
+    "name": "0.20mm PLA+ Flex3D @Unbound3D",
+    "inherits": "0.20mm Standard @Unbound3D",
+    "from": "system",
+    "setting_id": "GP011",
+    "instantiation": "true",
+    "brim_type": "outer_only",
+    "default_acceleration": "1000",
+    "inner_wall_acceleration": "800",
+    "outer_wall_acceleration": "800",
+    "top_surface_acceleration": "800",
+    "travel_acceleration": "350",
+    "compatible_printers": [
+        "Unbound3D Lynx 320 0.4 nozzle"
+    ]
+}

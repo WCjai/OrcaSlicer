@@ -1,0 +1,158 @@
+{
+    "name": "Unbound3D",
+    "version": "02.03.02.60",
+    "force_update": "0",
+    "description": "Unbound3D printer configurations",
+    "machine_model_list": [
+        {
+            "name": "Unbound3D Lynx 320",
+            "sub_path": "machine/Unbound3D Lynx 320.json"
+        }
+    ],
+    "process_list": [
+        {
+            "name": "fdm_process_common",
+            "sub_path": "process/fdm_process_common.json"
+        },
+        {
+            "name": "fdm_process_unbound3d_common",
+            "sub_path": "process/fdm_process_unbound3d_common.json"
+        },
+        {
+            "name": "0.20mm Standard @Unbound3D",
+            "sub_path": "process/0.20mm Standard @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm Standard Alt @Unbound3D",
+            "sub_path": "process/0.20mm Standard Alt @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PETG-CF Bambu @Unbound3D",
+            "sub_path": "process/0.20mm PETG-CF Bambu @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PA-CF eSUN @Unbound3D",
+            "sub_path": "process/0.20mm PA-CF eSUN @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PLA+ eSUN @Unbound3D",
+            "sub_path": "process/0.20mm PLA+ eSUN @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PA-CF Fibreel @Unbound3D",
+            "sub_path": "process/0.20mm PA-CF Fibreel @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PA-CF Fibreel Alt @Unbound3D",
+            "sub_path": "process/0.20mm PA-CF Fibreel Alt @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PLA+ Flex3D @Unbound3D",
+            "sub_path": "process/0.20mm PLA+ Flex3D @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PLA+ Numaker @Unbound3D",
+            "sub_path": "process/0.20mm PLA+ Numaker @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm PETG-HS Numaker @Unbound3D",
+            "sub_path": "process/0.20mm PETG-HS Numaker @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm TPU 95A @Unbound3D",
+            "sub_path": "process/0.20mm TPU 95A @Unbound3D.json"
+        },
+        {
+            "name": "0.20mm TPU 95A Alt @Unbound3D",
+            "sub_path": "process/0.20mm TPU 95A Alt @Unbound3D.json"
+        }
+    ],
+    "filament_list": [
+        {
+            "name": "fdm_filament_common",
+            "sub_path": "filament/fdm_filament_common.json"
+        },
+        {
+            "name": "eSUN PA-CF @Unbound3D Lynx 320",
+            "sub_path": "filament/eSUN PA-CF @Unbound3D Lynx 320.json"
+        },
+        {
+            "name": "eSUN PA-CF black @Unbound3D",
+            "sub_path": "filament/eSUN PA-CF black @Unbound3D.json"
+        },
+        {
+            "name": "eSUN PA-CF Lynx @Unbound3D",
+            "sub_path": "filament/eSUN PA-CF Lynx @Unbound3D.json"
+        },
+        {
+            "name": "eSUN PA-CF @Unbound3D",
+            "sub_path": "filament/eSUN PA-CF @Unbound3D.json"
+        },
+        {
+            "name": "eSUN PETG-CF @Unbound3D",
+            "sub_path": "filament/eSUN PETG-CF @Unbound3D.json"
+        },
+        {
+            "name": "Fibreel PA-CF black @Unbound3D",
+            "sub_path": "filament/Fibreel PA-CF black @Unbound3D.json"
+        },
+        {
+            "name": "Fibreel PA-CF Lynx @Unbound3D",
+            "sub_path": "filament/Fibreel PA-CF Lynx @Unbound3D.json"
+        },
+        {
+            "name": "Fibreel PA12-CF @Unbound3D",
+            "sub_path": "filament/Fibreel PA12-CF @Unbound3D.json"
+        },
+        {
+            "name": "Bambu PETG-CF @Unbound3D",
+            "sub_path": "filament/Bambu PETG-CF @Unbound3D.json"
+        },
+        {
+            "name": "eSUN PLA+ @Unbound3D",
+            "sub_path": "filament/eSUN PLA+ @Unbound3D.json"
+        },
+        {
+            "name": "Flex3D PLA+ @Unbound3D",
+            "sub_path": "filament/Flex3D PLA+ @Unbound3D.json"
+        },
+        {
+            "name": "Generic TPU @Unbound3D",
+            "sub_path": "filament/Generic TPU @Unbound3D.json"
+        },
+        {
+            "name": "Make3D PLA @Unbound3D",
+            "sub_path": "filament/Make3D PLA @Unbound3D.json"
+        },
+        {
+            "name": "NFill PLA Glass @Unbound3D",
+            "sub_path": "filament/NFill PLA Glass @Unbound3D.json"
+        },
+        {
+            "name": "Numaker PLA+ @Unbound3D",
+            "sub_path": "filament/Numaker PLA+ @Unbound3D.json"
+        },
+        {
+            "name": "Numakers PETG-HS @Unbound3D",
+            "sub_path": "filament/Numakers PETG-HS @Unbound3D.json"
+        },
+        {
+            "name": "TPU Lynx @Unbound3D",
+            "sub_path": "filament/TPU Lynx @Unbound3D.json"
+        }
+    ],
+    "machine_list": [
+        {
+            "name": "fdm_machine_common",
+            "sub_path": "machine/fdm_machine_common.json"
+        },
+        {
+            "name": "fdm_unbound3d_common",
+            "sub_path": "machine/fdm_unbound3d_common.json"
+        },
+        {
+            "name": "Unbound3D Lynx 320 0.4 nozzle",
+            "sub_path": "machine/Unbound3D Lynx 320 0.4 nozzle.json"
+        }
+    ]
+}

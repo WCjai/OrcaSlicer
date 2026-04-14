@@ -1,5 +1,5 @@
 {
-	"name": "OrcaSlicer",
+	"name": "Unbound3D-slicer",
 	"build": {
 		"dockerfile": "Dockerfile",
 			"args": {

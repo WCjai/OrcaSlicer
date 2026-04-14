@@ -1,5 +1,5 @@
 @echo off
-REM OrcaSlicer gettext
+REM Unbound3D-slicer gettext
 REM Created by SoftFever on 27/5/23.
 
 REM Check for --full argument

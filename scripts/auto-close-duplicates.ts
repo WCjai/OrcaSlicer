@@ -105,8 +105,8 @@ async function autoCloseDuplicates(): Promise<void> {
   }
   console.log("[DEBUG] GitHub token found");
 
-  const owner = process.env.GITHUB_REPOSITORY_OWNER || "OrcaSlicer";
-  const repo = process.env.GITHUB_REPOSITORY_NAME || "OrcaSlicer";
+  const owner = process.env.GITHUB_REPOSITORY_OWNER || "Unbound3D-slicer";
+  const repo = process.env.GITHUB_REPOSITORY_NAME || "Unbound3D-slicer";
   console.log(`[DEBUG] Repository: ${owner}/${repo}`);
 
   const threeDaysAgo = new Date();

@@ -1,0 +1,13 @@
+{
+    "default_acceleration": "3000",
+    "from": "User",
+    "inherits": "0.20mm Standard @MyKlipper",
+    "inner_wall_acceleration": "1500",
+    "is_custom_defined": "0",
+    "name": "0.20mm Standard @MyKlipper - Copy",
+    "outer_wall_acceleration": "1500",
+    "print_settings_id": "0.20mm Standard @MyKlipper - Copy",
+    "top_surface_acceleration": "800",
+    "travel_acceleration": "3000",
+    "version": "2.3.0.3"
+}

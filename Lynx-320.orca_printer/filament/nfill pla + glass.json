@@ -1,0 +1,25 @@
+{
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle"
+    ],
+    "filament_settings_id": [
+        "nfill pla + glass"
+    ],
+    "from": "User",
+    "inherits": "eSUN PLA+ @System",
+    "is_custom_defined": "0",
+    "name": "nfill pla + glass",
+    "nozzle_temperature_range_high": [
+        "200"
+    ],
+    "nozzle_temperature_range_low": [
+        "200"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "version": "2.3.0.3"
+}

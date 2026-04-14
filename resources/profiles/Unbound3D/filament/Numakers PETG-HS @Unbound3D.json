@@ -1,0 +1,21 @@
+{
+    "type": "filament",
+    "name": "Numakers PETG-HS @Unbound3D",
+    "inherits": "Generic PETG @System",
+    "from": "system",
+    "filament_id": "GFL16",
+    "setting_id": "GFS16",
+    "instantiation": "true",
+    "filament_type": ["PETG"],
+    "compatible_printers": ["Unbound3D Lynx 320 0.4 nozzle"],
+    "enable_pressure_advance": ["1"],
+    "fan_max_speed": ["50"],
+    "filament_flow_ratio": ["0.9975"],
+    "filament_max_volumetric_speed": ["22"],
+    "filament_settings_id": ["Numakers PETG-HS @Unbound3D"],
+    "nozzle_temperature": ["230"],
+    "nozzle_temperature_initial_layer": ["230"],
+    "nozzle_temperature_range_high": ["250"],
+    "pressure_advance": ["0.06"],
+    "slow_down_layer_time": ["0"]
+}

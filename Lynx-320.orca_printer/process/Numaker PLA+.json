@@ -1,0 +1,16 @@
+{
+    "brim_type": "outer_only",
+    "default_acceleration": "4000",
+    "exclude_object": "0",
+    "from": "User",
+    "inherits": "0.20mm Standard @MyKlipper",
+    "inner_wall_acceleration": "3000",
+    "is_custom_defined": "0",
+    "name": "Numaker PLA+",
+    "print_settings_id": "Numaker PLA+",
+    "sparse_infill_density": "10%",
+    "support_type": "tree(auto)",
+    "top_surface_acceleration": "800",
+    "travel_acceleration": "3000",
+    "version": "2.3.0.3"
+}

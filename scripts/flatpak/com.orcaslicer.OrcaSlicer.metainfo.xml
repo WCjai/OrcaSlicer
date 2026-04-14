@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>com.orcaslicer.OrcaSlicer</id>
-    <launchable type="desktop-id">com.orcaslicer.OrcaSlicer.desktop</launchable>
-    <name>OrcaSlicer</name>
+    <id>com.unbound3d.Unbound3DSlicer</id>
+    <launchable type="desktop-id">com.unbound3d.Unbound3DSlicer.desktop</launchable>
+    <name>Unbound3D Slicer</name>
     <summary>Get even more perfect prints!</summary>
-    <developer id="com.orcaslicer">
-        <name>SoftFever</name>
+    <developer id="com.unbound3d">
+        <name>Unbound3D</name>
     </developer>
-    <url type="homepage">https://www.orcaslicer.com</url>
-    <url type="help">https://www.orcaslicer.com/wiki</url>
-    <url type="bugtracker">https://github.com/OrcaSlicer/OrcaSlicer/issues/</url>
-    <url type="donation">https://ko-fi.com/SoftFever</url>
-    <url type="vcs-browser">https://github.com/OrcaSlicer/OrcaSlicer</url>
+    <url type="homepage">https://www.unbound3d.com</url>
+    <url type="help">https://www.unbound3d.com/wiki</url>
+    <url type="bugtracker">https://github.com/Unbound3D/Unbound3D-slicer/issues/</url>
+    <url type="donation">https://ko-fi.com/Unbound3D</url>
+    <url type="vcs-browser">https://github.com/Unbound3D/Unbound3D-slicer</url>
     <metadata_license>0BSD</metadata_license>
     <project_license>AGPL-3.0-only</project_license>
     <content_rating type="oars-1.1" />
@@ -24,21 +24,21 @@
     </recommends>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/OrcaSlicer/OrcaSlicer/v2.3.2/scripts/flatpak/images/1.png</image>
+            <image>https://raw.githubusercontent.com/Unbound3D/Unbound3D-slicer/v2.3.2/scripts/flatpak/images/1.png</image>
             <caption>A model ready to be sliced on a buildplate.</caption>
         </screenshot>
         <screenshot>
-            <image>https://raw.githubusercontent.com/OrcaSlicer/OrcaSlicer/v2.3.2/scripts/flatpak/images/2.png</image>
+            <image>https://raw.githubusercontent.com/Unbound3D/Unbound3D-slicer/v2.3.2/scripts/flatpak/images/2.png</image>
             <caption>A calibration test ready to be printed out.</caption>
         </screenshot>
     </screenshots>
     <description>
-        <p>OrcaSlicer is a powerful, free and open-source 3D printer slicer with cutting-edge
+        <p>Unbound3D Slicer is a powerful, free and open-source 3D printer slicer with cutting-edge
             features for FDM printing. It supports a wide range of printers from manufacturers
             including Bambu Lab, Prusa, Voron, Creality, and many more.</p>
         <p>Key features include advanced calibration tools, adaptive layer heights, tree supports,
             multi-material support, and an intuitive interface for both beginners and experts.
-            OrcaSlicer also provides built-in network printing capabilities for compatible printers.</p>
+            Unbound3D Slicer also provides built-in network printing capabilities for compatible printers.</p>
     </description>
     <branding>
         <color type="primary" scheme_preference="light">#009688</color>
@@ -46,7 +46,7 @@
     </branding>
     <releases>
         <release version="2.3.2" date="2025-03-23">
-            <url type="details">https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.3.2</url>
+            <url type="details">https://github.com/Unbound3D/Unbound3D-slicer/releases/tag/v2.3.2</url>
             <description>
                 <p>See the release page for detailed changelog.</p>
             </description>

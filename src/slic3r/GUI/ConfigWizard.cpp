@@ -146,6 +146,10 @@ BundleMap BundleMap::load()
             if (Slic3r::is_json_file(dir_entry.path().string())) {
                 std::string id = dir_entry.path().stem().string();  // stem() = filename() without the trailing ".json" part
 
+                // Only load Unbound3D and OrcaFilamentLibrary bundles
+                if (id != PresetBundle::ORCA_DEFAULT_BUNDLE && id != PresetBundle::ORCA_FILAMENT_LIBRARY)
+                    continue;
+
                 // Don't load this bundle if we've already loaded it.
                 if (res.find(id) != res.end()) { continue; }
 

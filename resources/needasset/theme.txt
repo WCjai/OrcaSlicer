@@ -1,0 +1,419 @@
+================================================================================
+  UNBOUND3D SLICER - THEME & COLOR PALETTE REFERENCE
+================================================================================
+
+PURPOSE:
+  This document maps EVERY color used in the OrcaSlicer UI theme system.
+  The art/design team should define a new Unbound3D color palette and
+  provide replacement values for each entry below.
+
+  Colors are grouped by role. Each entry shows:
+    - Current hex value(s) for light and dark modes
+    - Where it appears in the UI
+    - Which source file defines it
+
+================================================================================
+  BRAND ACCENT COLOR (The "OrcaSlicer Teal")
+================================================================================
+
+  This is the single most important color to replace. It appears everywhere:
+  buttons, toggles, links, borders, highlights, icons.
+
+  Current:  #009688  (light mode)  /  #00675b  (dark mode)
+  Variants: #26A69A  (hover/lighter) / #52c7b8 (icon tint) / #008172 (pressed)
+            #00FFD4  (confirm button hover glow)
+            #BFE1DE  (dropdown selected row - 25% accent overlay)
+            #E5F0EE  (combobox focused background - accent tint)
+
+  Files to update:
+    - src/slic3r/GUI/Widgets/StateColor.cpp    (core mapping table)
+    - src/slic3r/GUI/Widgets/Button.cpp        (button presets)
+    - src/slic3r/GUI/Widgets/TextInput.cpp     (input hover border)
+    - src/slic3r/GUI/Widgets/ComboBox.cpp      (combo hover border)
+    - src/slic3r/GUI/Widgets/SideButton.cpp    (sidebar buttons)
+    - src/slic3r/GUI/Widgets/SwitchButton.cpp  (toggle thumb)
+    - src/slic3r/GUI/Widgets/StepCtrl.cpp      (step indicator)
+    - src/slic3r/GUI/BitmapCache.cpp           (SVG icon recoloring)
+    - resources/web/homepage/css/dark.css       (web UI)
+
+  REPLACEMENT: [_________________]  (light)
+  REPLACEMENT: [_________________]  (dark)
+
+================================================================================
+  SECONDARY ACCENT / WARNING COLOR
+================================================================================
+
+  Current:  #FF6F00  (light mode)  /  #D15B00  (dark mode)
+  Usage:    Warning indicators, connection status alerts
+
+  File: src/slic3r/GUI/Widgets/StateColor.cpp
+
+  REPLACEMENT: [_________________]  (light)
+  REPLACEMENT: [_________________]  (dark)
+
+================================================================================
+  ERROR / ALERT COLOR
+================================================================================
+
+  Current:  #E14747  (error text)  /  #D01B1B  (dark variant)
+  Usage:    Error messages, validation failures
+
+  REPLACEMENT: [_________________]
+
+================================================================================
+  TEXT COLORS
+================================================================================
+
+  PRIMARY TEXT
+    Light mode: #262E30    Dark mode: #EFEFF0
+    Usage: Main body text, button labels, input text
+    Files: StateColor.cpp, Button.cpp, TextInput.cpp, ComboBox.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  SECONDARY TEXT
+    Light mode: #323A3D    Dark mode: #B3B3B5
+    Usage: Subtitles, secondary info
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  LABEL TEXT
+    Light mode: #363636    Dark mode: #B2B3B5
+    Usage: Setting names, form labels, dropdown items
+    File: GUI_App.cpp (m_color_label_default, m_color_label_sys)
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  MODIFIED SETTING INDICATOR
+    Both modes: #F1754E
+    Usage: Highlights settings that differ from defaults
+    File: GUI_App.cpp (m_color_label_modified)
+
+    REPLACEMENT: [_________________]
+
+  DISABLED TEXT
+    Light mode: #ACACAC    Dark mode: #65656A
+    Usage: Grayed-out labels, inactive controls
+    Files: StateColor.cpp, StepCtrl.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  MUTED TEXT
+    Light mode: #6B6B6B    Dark mode: #818182
+    Usage: Hint text, placeholder, disabled button labels
+    Files: TextInput.cpp, SwitchButton.cpp, SideButton.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  DIMMED TEXT
+    Light mode: #909090    Dark mode: #FFFFFF
+    Usage: Error codes, footnotes
+    Files: BitmapCache.cpp (icon replacement), DropDown.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  HYPERLINK
+    Normal: #009687    Hover: #26A69A
+    Usage: Clickable links in dialogs
+
+    REPLACEMENT: [_________________]  (normal)
+    REPLACEMENT: [_________________]  (hover)
+
+================================================================================
+  BACKGROUND COLORS
+================================================================================
+
+  WINDOW / MAIN BACKGROUND
+    Light mode: #FFFFFF    Dark mode: #2D2D31
+    Usage: Main application window, dialog backgrounds
+    Files: StateColor.cpp, GUI_App.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  TOP BAR / MENU BAR
+    Light mode: #3B4446    Dark mode: #2D2D30
+    Usage: Top navigation bar background
+    Files: StateColor.cpp, SideButton.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  SIDEBAR PANEL
+    Light mode: #CECECE    Dark mode: #54545B
+    Usage: Side panels, selected button background
+    Files: StateColor.cpp, GUI_App.cpp (m_color_selected_btn_bg)
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  SIDE PANEL INNER
+    Light mode: #FEFFFF
+    Usage: Sidebar content area
+
+    REPLACEMENT: [_________________]
+
+  ROW HIGHLIGHT / SELECTION
+    Light mode: #F1F1F1    Dark mode: #36363B
+    Usage: Table row hover, list selection highlight
+    Files: StateColor.cpp, GUI_App.cpp (m_color_highlight_default)
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  DISABLED INPUT BACKGROUND
+    Light mode: #F0F0F1    Dark mode: #333337
+    Usage: Disabled text fields, inactive controls
+    Files: TextInput.cpp, BitmapCache.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  AXIS CONTROL BACKGROUND
+    Light mode: #EEEEEE
+    Usage: Axis movement control buttons
+
+    REPLACEMENT: [_________________]
+
+================================================================================
+  BORDER & SEPARATOR COLORS
+================================================================================
+
+  INPUT BORDER (Default)
+    Light mode: #DBDBDB    Dark mode: #4A4A51
+    Usage: Text inputs, combo boxes, dropdowns - default state
+    Files: TextInput.cpp, ComboBox.cpp, DropDown.cpp, BitmapCache.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  SEPARATOR LINE
+    Light mode: #EEEEEE    Dark mode: #4C4C55
+    Usage: Horizontal/vertical dividers between UI sections
+    File: StateColor.cpp
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+  TAB / CANVAS BORDER
+    Light mode: #CECECE    Dark mode: #54545B
+    Usage: Tab control borders, drawing canvas edges
+
+    REPLACEMENT: [_________________]  (light)
+    REPLACEMENT: [_________________]  (dark)
+
+================================================================================
+  BUTTON COLORS
+================================================================================
+
+  DEFAULT BUTTON (btn_regular)
+    Background:  #DFDFDF (normal) / #D4D4D4 (hover) / #4D4D54 (dark hover)
+    Text:        #262E30 (normal) / #6B6A6A (disabled)
+    Border:      #009688 (accent)
+    File: Button.cpp
+
+  CONFIRM BUTTON (btn_confirm)
+    Background:  #009688 (normal - accent fill)
+    Text:        #FEFEFE (white on accent)
+    Hover Glow:  #00FFD4
+    File: Button.cpp
+
+  ALERT BUTTON (btn_alert)
+    Background:  #DFDFDF
+    Text:        #262E30
+    Border:      #009688
+    File: Button.cpp
+
+  DISABLED BUTTON (btn_disabled)
+    Background:  #DFDFDF
+    Text:        #6B6A6A
+    Border:      #DFDFDF
+    File: Button.cpp
+
+  BUTTON HOVER TEXT
+    Light mode: RGB(0,0,0)     Dark mode: RGB(255,255,254)
+    File: GUI_App.cpp (m_color_hovered_btn_label)
+
+================================================================================
+  TOGGLE / SWITCH COLORS
+================================================================================
+
+  TRACK
+    Off: #D9D9D9
+    File: SwitchButton.cpp
+
+  THUMB
+    On:  #009688 (accent)    Off: #D9D9D9
+    File: SwitchButton.cpp
+
+  LABEL
+    On:  #FFFFFE (white)     Off: #6B6B6B (muted)
+    File: SwitchButton.cpp
+
+    REPLACEMENT (track off):  [_________________]
+    REPLACEMENT (thumb on):   [_________________]
+
+================================================================================
+  STEP INDICATOR COLORS
+================================================================================
+
+  PROGRESS BAR
+    Inactive: #ACACAC    Active: #E1E1E1
+    File: StepCtrl.cpp
+
+  STEP TEXT
+    Current: #009688 (accent)    Inactive: #6B6B6B (muted)
+    File: StepCtrl.cpp
+
+  TIP TEXT
+    #828280
+    File: StepCtrl.cpp
+
+================================================================================
+  SVG / ICON RECOLORING TABLE
+================================================================================
+
+  The application dynamically recolors SVG icons at runtime. These are the
+  color replacement rules applied to all SVG assets.
+
+  File: src/slic3r/GUI/BitmapCache.cpp (lines 327-342)
+
+  LIGHT MODE ICON REPLACEMENTS:
+    #0x00AE42  -->  #009688   (green icons become accent teal)
+    #00FF00    -->  #52c7b8   (bright green becomes lighter teal)
+
+  DARK MODE ICON REPLACEMENTS:
+    #262E30  -->  #EFEFF0   (dark text becomes light text)
+    #323A3D  -->  #B3B3B5   (secondary dark text lightens)
+    #CECECE  -->  #54545B   (light borders become dark borders)
+    #6B6B6B  -->  #818182   (muted text slightly lighter)
+    #909090  -->  #FFFFFF   (dim gray becomes white)
+    #009688  -->  #00675b   (accent teal darkens for contrast)
+    #F1F1F1  -->  #36363B   (light bg becomes dark bg)
+    #DBDBDB  -->  #4A4A51   (input border darkens)
+    #F0F0F1  -->  #333337   (disabled bg darkens)
+
+================================================================================
+  WEB UI THEME COLORS (CSS)
+================================================================================
+
+  File: resources/web/homepage/css/dark.css (and siblings)
+
+  Body Background:       #242428
+  Border Color:          #3E3E45
+  Bright Text:           #EFEFF0
+  Muted Text:            #B3B3B5
+  Button Text:           #B3B3B5
+  Button Hover BG:       #223C3C
+  Menu Item Hover:       #00675b
+  Scrollbar Thumb:       #939594
+  Scrollbar Track:       #161817
+  Context Menu BG:       #242428
+  Thumbnail BG:          #36363C
+  Item Hover:            #00675b
+  Navigation Arrows:     #EFEFF0
+
+================================================================================
+  COMPLETE COLOR PALETTE SUMMARY
+================================================================================
+
+  ROLE                  LIGHT MODE    DARK MODE     NOTES
+  --------------------  ----------    ----------    -----------------------
+  Accent Primary        #009688       #00675b       Brand color (replace!)
+  Accent Hover          #26A69A       #26A69A       Lighter accent
+  Accent Light Tint     #52c7b8       #52c7b8       Icon tint
+  Accent Pressed        #008172       #008172       Pressed state
+  Accent BG Tint        #E5F0EE       #223C3C       Subtle accent bg
+  Accent Selection      #BFE1DE       --            Dropdown selected
+
+  Warning               #FF6F00       #D15B00       Orange alerts
+  Error                 #E14747       #D01B1B       Red errors
+  Modified Setting      #F1754E       #F1754E       Orange-red indicator
+
+  Text Primary          #262E30       #EFEFF0       Main text
+  Text Secondary        #323A3D       #B3B3B5       Subtitles
+  Text Label            #363636       #B2B3B5       Form labels
+  Text Muted            #6B6B6B       #818182       Hints, placeholders
+  Text Dim              #909090       #FFFFFF       Footnotes
+  Text Disabled         #ACACAC       #65656A       Grayed out
+  Text Button           #FEFEFE       #FEFEFE       White on accent
+  Text Button Disabled  #6B6A6A       #6B6A6A       Dimmed buttons
+
+  BG Window             #FFFFFF       #2D2D31       Main window
+  BG Web                --            #242428       Web views
+  BG Top Bar            #3B4446       #2D2D30       Menu bar
+  BG Sidebar            #CECECE       #54545B       Side panels
+  BG Side Inner         #FEFFFF       --            Panel content
+  BG Row Highlight      #F1F1F1       #36363B       Selection
+  BG Disabled           #F0F0F1       #333337       Inactive fields
+  BG Button Default     #DFDFDF       #3E3E45       Normal buttons
+  BG Button Hover       #D4D4D4       #4D4D54       Hovered buttons
+  BG Axis Control       #EEEEEE       --            Movement buttons
+
+  Border Input          #DBDBDB       #4A4A51       Text fields
+  Border Separator      #EEEEEE       #4C4C55       Dividers
+  Border Tab            #CECECE       #54545B       Tab edges
+  Border Web            --            #3E3E45       Web UI
+
+  Toggle Track          #D9D9D9       --            Switch off
+  Toggle Thumb On       #009688       --            Switch active
+  Step Inactive         #ACACAC       --            Progress bar
+  Step Active           #E1E1E1       --            Progress bar
+  Step Tip              #828280       --            Tooltip text
+
+  Scrollbar Thumb       --            #939594       Web scrollbar
+  Scrollbar Track       --            #161817       Web scrollbar
+
+================================================================================
+  SOURCE FILES TO MODIFY FOR REBRANDING
+================================================================================
+
+  Core Color System:
+    src/slic3r/GUI/Widgets/StateColor.cpp    - Master light/dark mapping
+    src/slic3r/GUI/BitmapCache.cpp           - SVG icon recoloring rules
+
+  Application Colors:
+    src/slic3r/GUI/GUI_App.cpp               - App-level color variables
+
+  Widget Styles:
+    src/slic3r/GUI/Widgets/Button.cpp        - Button color presets
+    src/slic3r/GUI/Widgets/TextInput.cpp     - Input field colors
+    src/slic3r/GUI/Widgets/ComboBox.cpp      - Dropdown colors
+    src/slic3r/GUI/Widgets/DropDown.cpp      - Popup dropdown colors
+    src/slic3r/GUI/Widgets/SwitchButton.cpp  - Toggle switch colors
+    src/slic3r/GUI/Widgets/SideButton.cpp    - Sidebar button colors
+    src/slic3r/GUI/Widgets/StepCtrl.cpp      - Step progress indicator
+
+  Web/CSS Styles:
+    resources/web/homepage/css/dark.css       - Homepage dark theme
+    resources/web/guide/css/dark.css          - Guide dark theme
+    resources/web/model/css/dark.css          - Model browser dark theme
+
+================================================================================
+  REBRANDING INSTRUCTIONS
+================================================================================
+
+  MINIMUM VIABLE REBRAND (fastest):
+    Replace #009688 globally with your new brand accent color.
+    This covers ~80% of the visual identity change.
+
+  FULL REBRAND:
+    1. Choose a primary accent color and its dark mode variant
+    2. Choose hover, pressed, and tint variants of the accent
+    3. Fill in all REPLACEMENT fields above
+    4. Dev team will do a find-and-replace across the source files listed
+    5. CSS files can be updated with simple search-replace
+
+  IMPORTANT:
+    - Maintain sufficient contrast ratios (WCAG AA minimum)
+    - Dark mode colors should be slightly desaturated versions
+    - Test both light and dark themes after changes
+    - SVG icon recoloring in BitmapCache.cpp must match new palette
+
+================================================================================

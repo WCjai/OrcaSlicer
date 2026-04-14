@@ -1,0 +1,28 @@
+{
+    "type": "process",
+    "name": "0.20mm PA-CF eSUN @Unbound3D",
+    "inherits": "0.20mm Standard @Unbound3D",
+    "from": "system",
+    "setting_id": "GP007",
+    "instantiation": "true",
+    "brim_type": "outer_only",
+    "default_acceleration": "4000",
+    "enable_support": "1",
+    "gap_infill_speed": "300",
+    "inner_wall_acceleration": "3000",
+    "inner_wall_speed": "150",
+    "internal_solid_infill_speed": "300",
+    "outer_wall_speed": "100",
+    "reduce_crossing_wall": "1",
+    "sparse_infill_density": "80%",
+    "sparse_infill_speed": "250",
+    "support_interface_speed": "100",
+    "support_speed": "200",
+    "support_type": "tree(auto)",
+    "top_surface_acceleration": "800",
+    "top_surface_speed": "150",
+    "travel_acceleration": "3000",
+    "compatible_printers": [
+        "Unbound3D Lynx 320 0.4 nozzle"
+    ]
+}

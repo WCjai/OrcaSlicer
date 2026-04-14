@@ -1,4 +1,4 @@
-app-id: com.orcaslicer.OrcaSlicer
+app-id: com.unbound3d.Unbound3DSlicer
 runtime: org.gnome.Platform
 runtime-version: "49"
 sdk: org.gnome.Sdk
@@ -6,7 +6,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm21
 command: entrypoint
 separate-locales: true
-rename-icon: OrcaSlicer
+rename-icon: Unbound3D-slicer
 build-options:
   append-path: /usr/lib/sdk/llvm21/bin
   prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
@@ -25,11 +25,11 @@ finish-args:
   - --filesystem=/run/media
   - --filesystem=/media
   - --filesystem=/run/spnav.sock:ro
-  # Allow read-only access to OrcaSlicer's legacy config and cache directories (if they exist) for migration purposes.
-  - --filesystem=~/.var/app/io.github.orcaslicer.OrcaSlicer:ro
-  # Allow OrcaSlicer to own and talk to instance-check D-Bus names (InstanceCheck.cpp)
-  - --talk-name=com.orcaslicer.OrcaSlicer.InstanceCheck.*
-  - --own-name=com.orcaslicer.OrcaSlicer.InstanceCheck.*
+  # Allow read-only access to Unbound3D-slicer's legacy config and cache directories (if they exist) for migration purposes.
+  - --filesystem=~/.var/app/io.github.unbound3d.Unbound3DSlicer:ro
+  # Allow Unbound3D-slicer to own and talk to instance-check D-Bus names (InstanceCheck.cpp)
+  - --talk-name=com.unbound3d.Unbound3DSlicer.InstanceCheck.*
+  - --own-name=com.unbound3d.Unbound3DSlicer.InstanceCheck.*
   - --system-talk-name=org.freedesktop.UDisks2
   - --env=SPNAV_SOCKET=/run/spnav.sock
 
@@ -126,7 +126,7 @@ modules:
         tag: orca-3.3.2
         commit: db1005db3dea2c37a46fb455a9a02e37aa360751
 
-  # OrcaSlicer C++ dependencies (built offline with pre-downloaded archives)
+  # Unbound3D-slicer C++ dependencies (built offline with pre-downloaded archives)
   - name: orca_deps
     buildsystem: simple
     build-options:
@@ -152,7 +152,7 @@ modules:
       - "*.la"
 
     sources:
-      # OrcaSlicer deps/ directory (avoids copying .git from worktree)
+      # Unbound3D-slicer deps/ directory (avoids copying .git from worktree)
       - type: dir
         path: ../../deps
         dest: deps
@@ -253,7 +253,7 @@ modules:
         sha256: 27b72ba2d5ff3d0a9814ad40d4cb88f8dc89a35491c0866d952473f8f9416b77
         dest: external-packages/Draco
 
-      # OpenSSL 1.1.1w (GNOME SDK has 3.x; OrcaSlicer requires 1.1.x)
+      # OpenSSL 1.1.1w (GNOME SDK has 3.x; Unbound3D-slicer requires 1.1.x)
       - type: file
         url: https://github.com/openssl/openssl/archive/OpenSSL_1_1_1w.tar.gz
         sha256: 2130e8c2fb3b79d1086186f78e59e8bc8d1a6aedf17ab3907f4cb9ae20918c41
@@ -306,7 +306,7 @@ modules:
         sha256: efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938
         dest: external-packages/FREETYPE
 
-  - name: OrcaSlicer
+  - name: Unbound3D-slicer
     buildsystem: simple
     build-commands:
       - |
@@ -318,7 +318,7 @@ modules:
           -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld" \
           -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld" \
           -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=lld"
-      - cmake --build build_flatpak --target OrcaSlicer -j$FLATPAK_BUILDER_N_JOBS
+      - cmake --build build_flatpak --target Unbound3D-slicer -j$FLATPAK_BUILDER_N_JOBS
       - ./scripts/run_gettext.sh
       - cmake --build build_flatpak --target install -j$FLATPAK_BUILDER_N_JOBS
 
@@ -330,6 +330,7 @@ modules:
       - | # Desktop integration files
         install -Dm644 -t /app/share/icons/hicolor/scalable/apps/ resources/images/OrcaSlicer.svg
         install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
+        mv /app/share/applications/Unbound3D-slicer.desktop /app/share/applications/${FLATPAK_ID}.desktop
         desktop-file-edit --set-key=Exec --set-value="entrypoint %U" /app/share/applications/${FLATPAK_ID}.desktop
         install -Dm755 entrypoint /app/bin
         install -Dm755 umount /app/bin
@@ -338,11 +339,11 @@ modules:
 
       - | # Install fonts into fontconfig-scanned directory so Pango finds them
         # before initialization (avoids ensure_faces crash from AddPrivateFont)
-        install -Dm644 -t /app/share/fonts/OrcaSlicer/ resources/fonts/*.ttf
-        fc-cache -f /app/share/fonts/OrcaSlicer/
+        install -Dm644 -t /app/share/fonts/Unbound3D-slicer/ resources/fonts/*.ttf
+        fc-cache -f /app/share/fonts/Unbound3D-slicer/
 
     sources:
-      # OrcaSlicer source tree (specific dirs to avoid copying .git from worktree)
+      # Unbound3D-slicer source tree (specific dirs to avoid copying .git from worktree)
       - type: dir
         path: ../../cmake
         dest: cmake
@@ -371,7 +372,7 @@ modules:
 
       # AppData metainfo for GNOME Software & Co.
       - type: file
-        path: com.orcaslicer.OrcaSlicer.metainfo.xml
+        path: com.unbound3d.Unbound3DSlicer.metainfo.xml
 
       # Startup script
       - type: file

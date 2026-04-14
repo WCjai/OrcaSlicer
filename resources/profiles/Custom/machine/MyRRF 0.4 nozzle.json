@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "machine",
     "name": "MyRRF 0.4 nozzle",
     "inherits": "fdm_rrf_common",

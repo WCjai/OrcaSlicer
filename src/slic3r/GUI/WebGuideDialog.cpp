@@ -107,7 +107,7 @@ static wxString update_custom_filaments()
 }
 
 GuideFrame::GuideFrame(GUI_App *pGUI, long style)
-    : DPIDialog((wxWindow *) (pGUI->mainframe), wxID_ANY, "OrcaSlicer", wxDefaultPosition, wxDefaultSize, style),
+    : DPIDialog((wxWindow *) (pGUI->mainframe), wxID_ANY, "Unbound3D Slicer", wxDefaultPosition, wxDefaultSize, style),
 	m_appconfig_new()
 {
     SetBackgroundColour(*wxWHITE);
@@ -1108,6 +1108,10 @@ int GuideFrame::LoadProfileData()
                 if(strExtension.CmpNoCase("json") != 0 || loaded_vendors.find(w2s(strVendor)) != loaded_vendors.end())
                     continue;
 
+                // Only load Unbound3D vendor
+                if (w2s(strVendor) != PresetBundle::ORCA_DEFAULT_BUNDLE && w2s(strVendor) != PresetBundle::ORCA_FILAMENT_LIBRARY)
+                    continue;
+
                 LoadProfileFamily(w2s(strVendor), iter->path().string());
                 loaded_vendors.insert(w2s(strVendor));
             }
@@ -1123,6 +1127,10 @@ int GuideFrame::LoadProfileData()
                 strVendor          = strVendor.AfterLast('/');
                 wxString strExtension = from_u8(iter->path().string()).AfterLast('.').Lower();
                 if (strExtension.CmpNoCase("json") != 0 || loaded_vendors.find(w2s(strVendor)) != loaded_vendors.end())
+                    continue;
+
+                // Only load Unbound3D vendor
+                if (w2s(strVendor) != PresetBundle::ORCA_DEFAULT_BUNDLE && w2s(strVendor) != PresetBundle::ORCA_FILAMENT_LIBRARY)
                     continue;
 
                 LoadProfileFamily(w2s(strVendor), iter->path().string());

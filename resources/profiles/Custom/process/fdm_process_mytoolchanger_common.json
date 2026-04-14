@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "process",
     "name": "fdm_process_mytoolchanger_common",
     "inherits": "fdm_process_klipper_common",

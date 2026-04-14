@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "process",
     "name": "0.08mm Extra Fine @MyRRF",
     "inherits": "fdm_process_rrf_common",

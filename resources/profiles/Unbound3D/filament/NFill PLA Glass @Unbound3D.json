@@ -1,0 +1,16 @@
+{
+    "type": "filament",
+    "name": "NFill PLA Glass @Unbound3D",
+    "inherits": "eSUN PLA+ @System",
+    "from": "system",
+    "filament_id": "GFL14",
+    "setting_id": "GFS14",
+    "instantiation": "true",
+    "filament_type": ["PLA"],
+    "compatible_printers": ["Unbound3D Lynx 320 0.4 nozzle"],
+    "filament_settings_id": ["NFill PLA Glass @Unbound3D"],
+    "nozzle_temperature_range_high": ["200"],
+    "nozzle_temperature_range_low": ["200"],
+    "textured_plate_temp": ["70"],
+    "textured_plate_temp_initial_layer": ["70"]
+}

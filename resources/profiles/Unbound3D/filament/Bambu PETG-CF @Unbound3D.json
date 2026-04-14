@@ -1,0 +1,23 @@
+{
+    "type": "filament",
+    "name": "Bambu PETG-CF @Unbound3D",
+    "inherits": "Bambu PETG-CF @System",
+    "from": "system",
+    "filament_id": "GFL09",
+    "setting_id": "GFS09",
+    "instantiation": "true",
+    "filament_type": ["PETG-CF"],
+    "compatible_printers": ["Unbound3D Lynx 320 0.4 nozzle"],
+    "enable_pressure_advance": ["1"],
+    "fan_max_speed": ["55"],
+    "fan_min_speed": ["0"],
+    "filament_flow_ratio": ["0.99"],
+    "filament_max_volumetric_speed": ["19"],
+    "filament_settings_id": ["Bambu PETG-CF @Unbound3D"],
+    "nozzle_temperature": ["270"],
+    "nozzle_temperature_initial_layer": ["270"],
+    "overhang_fan_speed": ["80"],
+    "pressure_advance": ["0.06"],
+    "textured_plate_temp": ["80"],
+    "textured_plate_temp_initial_layer": ["80"]
+}

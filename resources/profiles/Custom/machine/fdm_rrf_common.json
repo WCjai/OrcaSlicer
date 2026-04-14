@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "machine",
     "name": "fdm_rrf_common",
     "inherits": "fdm_machine_common",

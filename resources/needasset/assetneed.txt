@@ -1,0 +1,221 @@
+================================================================================
+  UNBOUND3D SLICER - BRANDING ASSET REPLACEMENT CHECKLIST
+================================================================================
+
+PURPOSE:
+  This folder contains copies of ALL image/icon assets that currently carry
+  OrcaSlicer (or legacy BambuStudio) branding. Each file listed below needs
+  a new Unbound3D-branded replacement placed at its ORIGINAL LOCATION.
+
+INSTRUCTIONS FOR ART TEAM:
+  1. Create Unbound3D-branded replacements matching the EXACT dimensions and
+     format of each file below.
+  2. Keep the SAME filename (unless noted) so code references don't break.
+  3. Place the finished replacement at the "Original Path" listed for each file.
+  4. Mark each item [x] when the replacement is ready.
+
+================================================================================
+  CATEGORY 1: PRIMARY APPLICATION ICONS (Must Replace)
+================================================================================
+
+[ ] OrcaSlicer.ico
+    Original Path: resources/images/OrcaSlicer.ico
+    Purpose: Windows primary application icon (multi-resolution)
+    Notes: Used by installer (NSIS), Windows taskbar, and file associations
+
+[ ] OrcaSlicer.icns
+    Original Path: resources/images/OrcaSlicer.icns
+    Purpose: macOS application bundle icon
+    Notes: Apple ICNS format, contains multiple resolutions
+
+[ ] OrcaSlicer.svg
+    Original Path: resources/images/OrcaSlicer.svg
+    Purpose: Master vector logo (scalable)
+    Notes: Primary source vector - all other sizes derived from this
+
+[ ] OrcaSlicer.png
+    Original Path: resources/images/OrcaSlicer.png
+    Purpose: Generic PNG logo
+
+[ ] Icon.icns
+    Original Path: resources/Icon.icns
+    Purpose: macOS bundle icon (top-level)
+    Notes: Referenced in CMakeLists.txt as MACOSX_BUNDLE_ICON_FILE
+
+================================================================================
+  CATEGORY 2: TITLE BAR / WINDOW ICONS
+================================================================================
+
+[ ] OrcaSlicerTitle.ico
+    Original Path: resources/images/OrcaSlicerTitle.ico
+    Purpose: Windows title bar icon
+
+[ ] OrcaSlicerTitle.png
+    Original Path: resources/images/OrcaSlicerTitle.png
+    Purpose: Title bar icon (PNG variant)
+
+================================================================================
+  CATEGORY 3: macOS SPECIFIC VARIANTS
+================================================================================
+
+[ ] OrcaSlicer-mac_256px.ico
+    Original Path: resources/images/OrcaSlicer-mac_256px.ico
+    Purpose: macOS icon variant (256x256)
+
+[ ] OrcaSlicer-mac_128px.png
+    Original Path: resources/images/OrcaSlicer-mac_128px.png
+    Purpose: macOS icon variant (128x128)
+
+================================================================================
+  CATEGORY 4: SVG LOGO VARIANTS (Vector Graphics)
+================================================================================
+
+[ ] OrcaSlicer_gray.svg
+    Original Path: resources/images/OrcaSlicer_gray.svg
+    Purpose: Grayscale/disabled state logo
+
+[ ] OrcaSlicer_gradient.svg
+    Original Path: resources/images/OrcaSlicer_gradient.svg
+    Purpose: Gradient-styled logo
+
+[ ] OrcaSlicer_gradient_circle.svg
+    Original Path: resources/images/OrcaSlicer_gradient_circle.svg
+    Purpose: Circular gradient logo variant
+
+[ ] OrcaSlicer_gradient_narrow.svg
+    Original Path: resources/images/OrcaSlicer_gradient_narrow.svg
+    Purpose: Narrow/compact gradient logo
+
+[ ] OrcaSlicer_about.svg
+    Original Path: resources/images/OrcaSlicer_about.svg
+    Purpose: About dialog logo (light theme)
+
+[ ] OrcaSlicer_about_dark.svg
+    Original Path: resources/images/OrcaSlicer_about_dark.svg
+    Purpose: About dialog logo (dark theme)
+
+================================================================================
+  CATEGORY 5: PNG ICON SIZES (Raster Icons)
+================================================================================
+
+[ ] OrcaSlicer_32px.png
+    Original Path: resources/images/OrcaSlicer_32px.png
+    Purpose: 32x32 pixel icon
+
+[ ] OrcaSlicer_64.png
+    Original Path: resources/images/OrcaSlicer_64.png
+    Purpose: 64x64 pixel icon
+
+[ ] OrcaSlicer_128px.png
+    Original Path: resources/images/OrcaSlicer_128px.png
+    Purpose: 128x128 pixel icon
+
+[ ] OrcaSlicer_154.png
+    Original Path: resources/images/OrcaSlicer_154.png
+    Purpose: 154x154 pixel icon
+
+[ ] OrcaSlicer_154_title.png
+    Original Path: resources/images/OrcaSlicer_154_title.png
+    Purpose: 154px icon with title text
+
+[ ] OrcaSlicer_192px.png
+    Original Path: resources/images/OrcaSlicer_192px.png
+    Purpose: 192x192 pixel icon (Linux/Android)
+
+[ ] OrcaSlicer_192px_grayscale.png
+    Original Path: resources/images/OrcaSlicer_192px_grayscale.png
+    Purpose: 192px grayscale/disabled variant
+
+[ ] OrcaSlicer_192px_transparent.png
+    Original Path: resources/images/OrcaSlicer_192px_transparent.png
+    Purpose: 192px with transparent background
+
+================================================================================
+  CATEGORY 6: SPLASH SCREENS
+================================================================================
+
+[ ] splash_logo.svg
+    Original Path: resources/images/splash_logo.svg
+    Purpose: Application splash screen (light theme)
+    Notes: Shown during app startup
+
+[ ] splash_logo_dark.svg
+    Original Path: resources/images/splash_logo_dark.svg
+    Purpose: Application splash screen (dark theme)
+    Notes: Shown during app startup in dark mode
+
+================================================================================
+  CATEGORY 7: LEGACY / UI ELEMENT BRANDING
+================================================================================
+
+[ ] studio_logo.svg
+    Original Path: resources/images/studio_logo.svg
+    Purpose: Studio branding variant (legacy BambuStudio)
+    Notes: Review if still used in UI
+
+[ ] BambuStudioBlack.svg
+    Original Path: resources/images/BambuStudioBlack.svg
+    Purpose: Legacy Bambu Studio branding
+    Notes: May appear in UI text replacement - review with devs
+
+[ ] orca_bed_pct_left.svg
+    Original Path: resources/images/orca_bed_pct_left.svg
+    Purpose: Orca-branded bed percentage UI indicator
+
+================================================================================
+  CATEGORY 8: BED TEXTURES
+================================================================================
+
+[ ] Custom_orcaslicer_bed_texture.svg
+    Original Path: resources/profiles/Custom/orcaslicer_bed_texture.svg
+    Purpose: Custom printer bed texture with OrcaSlicer branding
+
+[ ] Unbound3D_orcaslicer_bed_texture.svg
+    Original Path: resources/profiles/Unbound3D/orcaslicer_bed_texture.svg
+    Purpose: Unbound3D printer bed texture
+    Notes: HIGH PRIORITY - this is our own printer's bed texture!
+
+================================================================================
+  CATEGORY 9: LYNX 320 MACHINE ASSETS
+================================================================================
+
+[ ] Unbound3D Lynx 320_cover.png
+    Original Path: resources/profiles/Unbound3D/Unbound3D Lynx 320_cover.png
+    Purpose: Printer selection thumbnail / cover image for Lynx 320
+    Notes: Shown in printer picker and config wizard. Should feature Lynx 320
+           hardware photo or branded illustration.
+
+[ ] Custom_350_bed.stl
+    Original Path: resources/profiles/Unbound3D/Custom_350_bed.stl
+    Purpose: 3D bed model displayed in the viewport for Lynx 320
+    Notes: Referenced by machine model JSON as "bed_model".
+           Replace if you want a branded/custom bed shape.
+
+[ ] Unbound3D_orcaslicer_bed_texture.svg  (also listed in Category 8)
+    Original Path: resources/profiles/Unbound3D/orcaslicer_bed_texture.svg
+    Purpose: Bed surface texture overlay shown on the 3D bed model
+    Notes: Referenced by machine model JSON as "bed_texture".
+           HIGH PRIORITY - currently shows OrcaSlicer branding on the bed.
+
+================================================================================
+  TOTAL FILES: 32 (30 app branding + 2 new Lynx 320 machine assets)
+================================================================================
+
+  DELIVERY FORMAT REQUIREMENTS:
+  - SVG: Clean vector paths, no embedded rasters where possible
+  - PNG: Match exact pixel dimensions of originals
+  - ICO: Multi-resolution (16, 32, 48, 256) - use png2ico or similar
+  - ICNS: Apple Icon Image format - use iconutil on macOS
+  - All: Transparent backgrounds where the original has transparency
+
+  COLOR PALETTE:
+  - Primary: [TO BE DEFINED BY ART TEAM]
+  - Secondary: [TO BE DEFINED BY ART TEAM]
+  - Ensure both light and dark theme variants are provided
+
+  AFTER REPLACEMENT:
+  - Dev team will update code references if filenames change
+  - Windows RC files (src/dev-utils/platform/msw/) reference icon by name
+  - macOS Info.plist and CMakeLists.txt reference icon paths
+  - Linux .desktop file references icon name
+================================================================================

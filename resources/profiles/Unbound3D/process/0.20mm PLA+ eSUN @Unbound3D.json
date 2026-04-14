@@ -1,0 +1,20 @@
+{
+    "type": "process",
+    "name": "0.20mm PLA+ eSUN @Unbound3D",
+    "inherits": "0.20mm Standard @Unbound3D",
+    "from": "system",
+    "setting_id": "GP008",
+    "instantiation": "true",
+    "brim_type": "outer_only",
+    "default_acceleration": "4000",
+    "enable_support": "1",
+    "exclude_object": "0",
+    "inner_wall_acceleration": "3000",
+    "sparse_infill_density": "10%",
+    "support_type": "tree(auto)",
+    "top_surface_acceleration": "800",
+    "travel_acceleration": "3000",
+    "compatible_printers": [
+        "Unbound3D Lynx 320 0.4 nozzle"
+    ]
+}

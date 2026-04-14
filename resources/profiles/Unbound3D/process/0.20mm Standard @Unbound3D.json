@@ -1,0 +1,12 @@
+{
+    "type": "process",
+    "name": "0.20mm Standard @Unbound3D",
+    "inherits": "fdm_process_unbound3d_common",
+    "from": "system",
+    "setting_id": "GP004",
+    "instantiation": "true",
+    "layer_height": "0.2",
+    "compatible_printers": [
+        "Unbound3D Lynx 320 0.4 nozzle"
+    ]
+}
