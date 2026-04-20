@@ -24175,13 +24175,6 @@ msgstr ""
 #~ msgstr "Imposta il tipo di tesa su \"Dipinto\""
 
 #~ msgid ""
-#~ "Unbound3D Slicer will terminate because of running out of memory. It may be a "
-#~ "bug. It will be appreciated if you report the issue to our team."
-#~ msgstr ""
-#~ "Unbound3D Slicer ha esaurito la memoria e verrà chiuso. Questo potrebbe essere "
-#~ "un bug. Si prega di segnalare questo errore al supporto tecnico."
-
-#~ msgid ""
 #~ "We have added an experimental style \"Tree Slim\" that features smaller "
 #~ "support volume but weaker strength.\n"
 #~ "We recommend using it with: 0 interface layers, 0 top distance, 2 walls."

@@ -1,0 +1,87 @@
+﻿================================================================================
+  UNBOUND3D SLICER - HAVEASSET STATUS REPORT
+================================================================================
+
+Generated: April 20, 2026
+
+================================================================================
+  ASSETS SUCCESSFULLY GENERATED
+================================================================================
+
+  ICO FILES (from existing Unbound3D-branded PNGs):
+  - OrcaSlicer.ico         Multi-res (16/32/48/64/128/256) Windows icon
+  - OrcaSlicerTitle.ico    Title bar icon (16/32)
+  - OrcaSlicer-mac_256px.ico  macOS-style 256px ICO
+
+  PNG FILES:
+  - OrcaSlicerTitle.png    154x154 title variant (resized from 154_title)
+  - OrcaSlicer_192px_grayscale.png  FIXED - now actually grayscale
+
+  SVG FILES (with embedded Unbound3D PNG icons):
+  - OrcaSlicer.svg                     64x64 app icon
+  - OrcaSlicer_about.svg               560x125 about dialog (light)
+  - OrcaSlicer_about_dark.svg          560x125 about dialog (dark)
+  - splash_logo.svg                    480x480 splash screen (light)
+  - splash_logo_dark.svg               480x480 splash screen (dark)
+  - OrcaSlicer_gray.svg                1024x1024 gray variant
+  - OrcaSlicer_gradient.svg            1024x1024 gradient variant
+  - OrcaSlicer_gradient_circle.svg     1024x1024 with corner brackets
+  - OrcaSlicer_gradient_narrow.svg     815x1024 narrow variant
+  - studio_logo.svg                    Copy of gradient_narrow
+  - BambuStudioBlack.svg               10x12 U-shape monogram
+  - orca_bed_pct_left.svg              24x302 vertical "Unbound3D" text
+  - Custom_orcaslicer_bed_texture.svg  512x512 bed texture
+  - Unbound3D_orcaslicer_bed_texture.svg  512x512 bed texture
+
+================================================================================
+  PREVIOUSLY PROVIDED (12 PNGs from user)
+================================================================================
+  - Company logo.png (source)
+  - OrcaSlicer.png, OrcaSlicer_32px.png, OrcaSlicer_64.png
+  - OrcaSlicer_128px.png, OrcaSlicer_154.png, OrcaSlicer_154_title.png
+  - OrcaSlicer_192px.png, OrcaSlicer_192px_transparent.png
+  - OrcaSlicer-mac_128px.png, OrcaSlicer-mac_256px.png
+
+================================================================================
+  STILL MISSING / NEEDS MANUAL WORK
+================================================================================
+
+  ICNS FILES (macOS icon bundles - requires macOS tools):
+  - OrcaSlicer.icns    Use iconutil on macOS or online png-to-icns converter
+  - Icon.icns          Copy of OrcaSlicer.icns
+
+  STL FILE:
+  - Custom_350_bed.stl  Reuse original from needasset (geometry, not branding)
+
+  PRINTER COVER:
+  - Unbound3D Lynx 320_cover.png  Needs actual photo/render of Lynx 320
+
+  SVG QUALITY NOTE:
+  - SVGs use embedded PNG icons (not pure vector paths)
+  - For production quality, consider having a designer create pure vector
+    versions of OrcaSlicer.svg, about, and splash SVGs using the Company
+    logo traced to vector paths in Inkscape/Illustrator
+
+================================================================================
+  QUICK COMMANDS FOR REMAINING ITEMS
+================================================================================
+
+  ICNS (on macOS):
+    mkdir Unbound3D.iconset
+    sips -z 16 16 OrcaSlicer_32px.png --out Unbound3D.iconset/icon_16x16.png
+    sips -z 32 32 OrcaSlicer_32px.png --out Unbound3D.iconset/icon_16x16@2x.png
+    sips -z 32 32 OrcaSlicer_32px.png --out Unbound3D.iconset/icon_32x32.png
+    sips -z 64 64 OrcaSlicer_64.png --out Unbound3D.iconset/icon_32x32@2x.png
+    sips -z 128 128 OrcaSlicer_128px.png --out Unbound3D.iconset/icon_128x128.png
+    sips -z 256 256 OrcaSlicer-mac_256px.png --out Unbound3D.iconset/icon_128x128@2x.png
+    sips -z 256 256 OrcaSlicer-mac_256px.png --out Unbound3D.iconset/icon_256x256.png
+    sips -z 512 512 OrcaSlicer_192px.png --out Unbound3D.iconset/icon_256x256@2x.png
+    sips -z 512 512 OrcaSlicer_192px.png --out Unbound3D.iconset/icon_512x512.png
+    sips -z 1024 1024 "Company logo.png" --out Unbound3D.iconset/icon_512x512@2x.png
+    iconutil -c icns Unbound3D.iconset -o OrcaSlicer.icns
+    cp OrcaSlicer.icns Icon.icns
+
+  STL:
+    Copy from needasset: Custom_350_bed.stl (same physical bed geometry)
+
+================================================================================

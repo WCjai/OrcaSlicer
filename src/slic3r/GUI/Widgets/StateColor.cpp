@@ -6,15 +6,15 @@ static bool gDarkMode = false;
 static bool operator<(wxColour const &l, wxColour const &r) { return l.GetRGBA() < r.GetRGBA(); }
 
 static std::map<wxColour, wxColour> gDarkColors{
-    {"#009688", "#00675b"}, // rgb(0, 150, 136)    ORCA color
+    {"#333333", "#CCCCCC"}, // Brand accent (was teal #333333)
     {"#1F8EEA", "#2778D2"}, // rgb(31, 142, 234)   ???
     {"#FF6F00", "#D15B00"}, // rgb(255, 111, 0)    Secondary color
     {"#D01B1B", "#BB2A3A"}, // rgb(208, 27, 27)    ???
-    {"#262E30", "#EFEFF0"}, // rgb(38, 46, 48)     Button text color | Input Text Color
+    {"#262E30", "#EFEFF0"}, // rgb(42, 42, 42)     Button text color | Input Text Color
     {"#DFDFDF", "#3E3E45"}, // rgb(223, 223, 223)  Button Background color
     {"#D4D4D4", "#4D4D54"}, // rgb(212, 212, 212)  Button Background color on Hover
     {"#6B6A6A", "#909090"}, // rgb(107, 107, 106)  Button Dimmed text
-    {"#26A69A", "#008172"}, // rgb(0, 150, 136)    Button Confirm Color hover | ORCA Color Hover
+    {"#555555", "#AAAAAA"}, // Brand accent hover (was teal #555555)
     {"#6B6B6A", "#B3B3B5"}, // rgb(107, 107, 106)  Input box side text
     {"#2C2C2E", "#B3B3B4"}, // rgb(44, 44, 46)     ???
     {"#6B6B6B", "#818183"}, // rgb(107, 107, 107)  Disabled Text
@@ -25,7 +25,7 @@ static std::map<wxColour, wxColour> gDarkColors{
     {"#FFFFFF", "#2D2D31"}, // rgb(255, 255, 255)  Window background
     {"#F8F8F8", "#36363C"}, // rgb(248, 248, 248)  Sidebar > Titlebar > Gradient Top | BBL monitor page titlebar bg
     {"#F1F1F1", "#36363B"}, // rgb(241, 241, 241)  Sidebar > Titlebar > Gradient Bottom
-    {"#3B4446", "#2D2D30"}, // rgb(59, 68, 78)     Top Bar / Main tab bar bg color
+    {"#2A2A2A", "#1A1A1A"}, // Top Bar / Main tab bar bg (was #2A2A2A)
     {"#CECECE", "#54545B"}, // rgb(206, 206, 206)  Sidebar wxPanel bg | 
     {"#DBFDD5", "#3B3B40"}, // rgb(219, 253, 213)  Not Used anymore // Was used for BBS combo boxes etc
     {"#000000", "#FFFFFE"}, // rgb(0, 0, 0)        Mostly Text color wxBlack
@@ -46,8 +46,8 @@ static std::map<wxColour, wxColour> gDarkColors{
     {"#EBF9F0", "#293F34"},
     //{"#F0F0F0", "#4C4C54"},
     // ORCA
-    {"#BFE1DE", "#223C3C"}, // rgb(191, 225, 222)  Dropdown checked item background color > ORCA color with %25 opacity
-    {"#E5F0EE", "#283232"}, // rgb(229, 240, 238)  Combo / Dropdown focused background color > ORCA color with %10 opacity
+    {"#E0E0E0", "#3A3A3A"}, // Dropdown checked bg (was teal tint #E0E0E0)
+    {"#F0F0F0", "#333333"}, // Combo/Dropdown focused bg (was teal tint #F0F0F0)
 };
 
 std::tuple<double, double, double> StateColor::GetLAB(const wxColour& color) {

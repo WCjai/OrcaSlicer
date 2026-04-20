@@ -337,10 +337,6 @@
             "sub_path": "filament/Elegoo/Elegoo PETG @base.json"
         },
         {
-            "name": "Elegoo PETG PRO @base",
-            "sub_path": "filament/Elegoo/Elegoo PETG PRO @base.json"
-        },
-        {
             "name": "Elegoo PETG-CF @base",
             "sub_path": "filament/Elegoo/Elegoo PETG-CF @base.json"
         },
@@ -1043,10 +1039,6 @@
         {
             "name": "Elas PETG Basic @System",
             "sub_path": "filament/Elas/Elas PETG Basic @System.json"
-        },
-        {
-            "name": "Elegoo PETG PRO @System",
-            "sub_path": "filament/Elegoo/Elegoo PETG PRO @System.json"
         },
         {
             "name": "Elegoo PETG-CF @System",

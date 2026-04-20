@@ -61,7 +61,7 @@ body
 /*-----Right Top MenuBtn-----*/
 .MenuItem:hover
 {
-	border-color: #00675b;
+	border-color: #CCCCCC;
 	background-color: #223C3C;
 }
 
@@ -80,7 +80,7 @@ body
 
 .CT_Item:hover
 {
-	background-color:#00675b; /*ORCA color*/
+	background-color:#CCCCCC; /*ORCA color*/
 }
 
 /*----User Manual------*/

@@ -92,8 +92,8 @@ void KBShortcutsDialog::OnSelectTabel(wxCommandEvent &event)
     while (i != m_hash_selector.end()) {
         Select *sel = i->second;
         if (id == sel->m_index) {
-            sel->m_tab_button->SetBackgroundColour(StateColor::darkModeColorFor(wxColour("#BFE1DE"))); // ORCA color for selected tab background
-            sel->m_tab_text->SetBackgroundColour(StateColor::darkModeColorFor(wxColour("#BFE1DE"))); // ORCA color for selected tab background
+            sel->m_tab_button->SetBackgroundColour(StateColor::darkModeColorFor(wxColour("#E0E0E0"))); // ORCA color for selected tab background
+            sel->m_tab_text->SetBackgroundColour(StateColor::darkModeColorFor(wxColour("#E0E0E0"))); // ORCA color for selected tab background
             sel->m_tab_text->SetFont(::Label::Head_13);
             sel->m_tab_button->Refresh();
             sel->m_tab_text->Refresh();
@@ -121,7 +121,7 @@ wxWindow *KBShortcutsDialog::create_button(int id, wxString text)
 
     auto stext = new wxStaticText(tab_button, wxID_ANY, text, wxDefaultPosition, wxDefaultSize, 0);
     stext->SetFont(::Label::Body_13);
-    stext->SetForegroundColour(wxColour(38, 46, 48));
+    stext->SetForegroundColour(wxColour(42, 42, 42));
     stext->Wrap(-1);
     sizer->Add(stext, 1, wxALIGN_CENTER, 0);
 
