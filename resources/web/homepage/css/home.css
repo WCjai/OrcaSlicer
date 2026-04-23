@@ -47,7 +47,7 @@ html, body {
 .LinkBtn
 {
 	font-size:12px;
-	color: #00ffea;	
+	color: #CCCCCC;	
 	cursor: pointer;
 }
 
@@ -118,7 +118,7 @@ body
 
 #DownloadBtn
 {
-	color:#00ffd9;
+	color:#CCCCCC;
 }
 
 

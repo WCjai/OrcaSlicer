@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="330mm" height="305mm" viewBox="0 0 330 305">
+  <!-- Bed surface background -->
+  <rect x="0" y="0" width="330" height="305" fill="none"/>
+  <!-- Grid lines - major every 50mm -->
+  <g stroke="#444444" stroke-width="0.4" opacity="0.5">
+    <line x1="50" y1="0" x2="50" y2="305"/>
+    <line x1="100" y1="0" x2="100" y2="305"/>
+    <line x1="150" y1="0" x2="150" y2="305"/>
+    <line x1="200" y1="0" x2="200" y2="305"/>
+    <line x1="250" y1="0" x2="250" y2="305"/>
+    <line x1="300" y1="0" x2="300" y2="305"/>
+    <line x1="0" y1="50" x2="330" y2="50"/>
+    <line x1="0" y1="100" x2="330" y2="100"/>
+    <line x1="0" y1="150" x2="330" y2="150"/>
+    <line x1="0" y1="200" x2="330" y2="200"/>
+    <line x1="0" y1="250" x2="330" y2="250"/>
+    <line x1="0" y1="300" x2="330" y2="300"/>
+  </g>
+  <!-- Corner brackets - charcoal #555555 -->
+  <g stroke="#555555" stroke-width="1.2" fill="none">
+    <!-- Top-left -->
+    <polyline points="0,12 0,0 12,0"/>
+    <!-- Top-right -->
+    <polyline points="318,0 330,0 330,12"/>
+    <!-- Bottom-right -->
+    <polyline points="330,293 330,305 318,305"/>
+    <!-- Bottom-left -->
+    <polyline points="12,305 0,305 0,293"/>
+  </g>
+  <!-- Center crosshair -->
+  <g stroke="#555555" stroke-width="0.5" opacity="0.6">
+    <line x1="160" y1="148" x2="170" y2="148"/>
+    <line x1="165" y1="143" x2="165" y2="153"/>
+  </g>
+  <!-- Unbound3D branding - bottom right -->
+  <text x="268" y="295" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#555555">UNBOUND 3D</text>
+  <text x="268" y="303" font-family="Arial, Helvetica, sans-serif" font-size="5.5" fill="#777777">INDUSTRIES</text>
+</svg>

@@ -5,8 +5,8 @@
     "nozzle_diameter": "0.4",
     "machine_tech": "FFF",
     "family": "Unbound3D",
-    "bed_model": "Custom_350_bed.stl",
-    "bed_texture": "orcaslicer_bed_texture.svg",
+    "bed_model": "Unbound3D_Lynx320_bed.stl",
+    "bed_texture": "Unbound3D_Lynx320_bed_texture.svg",
     "hotend_model": "",
     "default_materials": "eSUN PLA+ @Unbound3D;eSUN PA-CF @Unbound3D;Generic TPU @Unbound3D;Bambu PETG-CF @Unbound3D"
 }

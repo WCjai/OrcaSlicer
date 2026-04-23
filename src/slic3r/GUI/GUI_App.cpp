@@ -359,10 +359,26 @@ public:
         int width = bmp.GetWidth();
 		int height = bmp.GetHeight();
 
-		// Logo
-        BitmapCache bmp_cache;
-        wxBitmap logo_bmp = *bmp_cache.load_svg(is_dark ? "splash_logo_dark" : "splash_logo", width, height);  // use with full width & height
-        memDc.DrawBitmap(logo_bmp, 0, 0, true);
+		// Logo - load company logo PNG directly (avoids nanosvg embedded-image limitation)
+        {
+            wxString logo_file = from_u8(Slic3r::var(is_dark ? "splash_company_logo_dark.png" : "splash_company_logo.png"));
+            wxImage logo_img;
+            if (logo_img.LoadFile(logo_file, wxBITMAP_TYPE_PNG) && logo_img.IsOk()) {
+                int logo_w = logo_img.GetWidth();
+                int logo_h = logo_img.GetHeight();
+                // Fit logo into the top 62% of the splash (version text starts at 70%)
+                int max_logo_h = int(height * 0.62);
+                int max_logo_w = int(width * 0.80);
+                double scale = std::min((double)max_logo_w / logo_w, (double)max_logo_h / logo_h);
+                int new_w = int(logo_w * scale);
+                int new_h = int(logo_h * scale);
+                logo_img = logo_img.Scale(new_w, new_h, wxIMAGE_QUALITY_HIGH);
+                wxBitmap logo_bmp(logo_img);
+                int x = (width - new_w) / 2;
+                int y = (int(height * 0.62) - new_h) / 2;  // vertically centered in top 62%
+                memDc.DrawBitmap(logo_bmp, x, y, true);
+            }
+        }
 
         // Version
         memDc.SetFont(m_constant_text.version_font);

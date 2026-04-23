@@ -36,17 +36,17 @@
   
 @media (prefers-color-scheme: dark) { 
 :root {
-	--main-color			: #00675B;
-	--main-color-hover		: #222222;
-	--main-color-fixed		: #333333;
+	--main-color			: #CCCCCC;
+	--main-color-hover		: #AAAAAA;
+	--main-color-fixed		: #CCCCCC;
 	--bg-color				: #2D2D31;
 	--bg-color-secondary	: #36363B;
 	--bg-color-alt			: #242428;
 	--fg-color-text			: #EFEFF0;
 	--fg-color-label		: #B2B3B5;
 	--fg-color-disabled		: #65656A;
-	--focus-bg-item			: #223C3C;
-	--focus-bg-box			: #283232;
+	--focus-bg-item			: #3A3A3A;
+	--focus-bg-box			: #333333;
 	--border-color			: #4A4A51;
 	--icon-color			: #949494;
 	--button-fg-light		: #FEFEFE;

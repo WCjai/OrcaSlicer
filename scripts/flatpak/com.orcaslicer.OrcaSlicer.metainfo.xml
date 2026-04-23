@@ -41,7 +41,7 @@
             Unbound3D Slicer also provides built-in network printing capabilities for compatible printers.</p>
     </description>
     <branding>
-        <color type="primary" scheme_preference="light">#009688</color>
+        <color type="primary" scheme_preference="light">#333333</color>
         <color type="primary" scheme_preference="dark">#00695C</color>
     </branding>
     <releases>

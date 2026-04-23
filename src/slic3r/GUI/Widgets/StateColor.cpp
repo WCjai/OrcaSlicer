@@ -27,11 +27,11 @@ static std::map<wxColour, wxColour> gDarkColors{
     {"#F1F1F1", "#36363B"}, // rgb(241, 241, 241)  Sidebar > Titlebar > Gradient Bottom
     {"#2A2A2A", "#1A1A1A"}, // Top Bar / Main tab bar bg (was #2A2A2A)
     {"#CECECE", "#54545B"}, // rgb(206, 206, 206)  Sidebar wxPanel bg | 
-    {"#DBFDD5", "#3B3B40"}, // rgb(219, 253, 213)  Not Used anymore // Was used for BBS combo boxes etc
+    {"#F0F0F0", "#3B3B40"}, // rgb(240, 240, 240)  Neutral light gray (was light-green tint #DBFDD5)
     {"#000000", "#FFFFFE"}, // rgb(0, 0, 0)        Mostly Text color wxBlack
     {"#F4F4F4", "#36363D"}, // rgb(244, 244, 244)  ???
     {"#DBDBDB", "#4A4A51"}, // rgb(219, 219, 219)  Input/Combo Box Border Color
-    {"#EDFAF2", "#283232"}, // rgb(229, 240, 238)  Not Used anymore // Was used for BBS Combo / Dropdown focused background color
+    {"#F0F0F0", "#333333"}, // rgb(240, 240, 240)  Neutral light gray (was green-tint #EDFAF2 / dark green #283232)
     {"#323A3C", "#E5E5E6"}, // rgb(50, 58, 60)     Text color used on search list | 
     {"#303A3C", "#E5E5E5"}, // rgb(48, 58, 60)     Object Table > Column header text color | StaticBox Border Color
     {"#FEFFFF", "#242428"}, // rgb(254, 255, 255)  Side Tabbar bg | 
@@ -39,11 +39,11 @@ static std::map<wxColour, wxColour> gDarkColors{
     {"#363636", "#B2B3B5"}, // rgb(54, 54, 54)     Sidebar > Parameter Label/Title color | Sidebar tab text | Create Filament window text
     {"#F0F0F1", "#333337"}, // rgb(240, 240, 241)  Disabled element background // ORCA Used better background color for dark mode
     {"#9E9E9E", "#53545A"}, // rgb(158, 158, 158)  ???
-    {"#D7E8DE", "#1F2B27"}, // rgb(215, 232, 222)  Not Used anymore // Leftover from BBS
+    {"#EEEEEE", "#2D2D2D"}, // rgb(238, 238, 238)  Neutral light gray (was green-tint #D7E8DE / dark green #1F2B27)
     {"#2B3436", "#808080"}, // rgb(43, 52, 54)     Not Used anymore // Leftover from BBS. Was used as main fill color of icons
     {"#ABABAB", "#ABABAB"},
     {"#D9D9D9", "#2D2D32"}, // rgb(217, 217, 217)  Sidebar > Toggle button track color
-    {"#EBF9F0", "#293F34"},
+    {"#F0F0F1", "#333337"},
     //{"#F0F0F0", "#4C4C54"},
     // ORCA
     {"#E0E0E0", "#3A3A3A"}, // Dropdown checked bg (was teal tint #E0E0E0)
