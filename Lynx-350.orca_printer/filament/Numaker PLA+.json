@@ -1,0 +1,76 @@
+{
+    "adaptive_pressure_advance": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "75"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle"
+    ],
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "50"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "70"
+    ],
+    "filament_flow_ratio": [
+        "0.956"
+    ],
+    "filament_max_volumetric_speed": [
+        "50"
+    ],
+    "filament_settings_id": [
+        "Numaker PLA+"
+    ],
+    "from": "User",
+    "full_fan_speed_layer": [
+        "1"
+    ],
+    "inherits": "eSUN PLA+ @System",
+    "is_custom_defined": "0",
+    "name": "Numaker PLA+",
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "pressure_advance": [
+        "0.01"
+    ],
+    "slow_down_for_layer_cooling": [
+        "0"
+    ],
+    "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_min_speed": [
+        "0"
+    ],
+    "supertack_plate_temp": [
+        "50"
+    ],
+    "supertack_plate_temp_initial_layer": [
+        "50"
+    ],
+    "textured_cool_plate_temp": [
+        "50"
+    ],
+    "textured_cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "version": "2.3.0.3"
+}

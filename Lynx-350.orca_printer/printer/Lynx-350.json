@@ -1,0 +1,237 @@
+{
+    "adaptive_bed_mesh_margin": "0",
+    "auxiliary_fan": "1",
+    "bbl_use_printhost": "0",
+    "bed_custom_model": "",
+    "bed_custom_texture": "",
+    "bed_exclude_area": [
+        "0x0"
+    ],
+    "bed_mesh_max": "99999,99999",
+    "bed_mesh_min": "-99999,-99999",
+    "bed_mesh_probe_distance": "50,50",
+    "before_layer_change_gcode": "TIMELAPSE_TAKE_FRAME",
+    "best_object_pos": "0.5,0.5",
+    "change_extrusion_role_gcode": "",
+    "change_filament_gcode": "",
+    "cooling_tube_length": "5",
+    "cooling_tube_retraction": "91.5",
+    "default_bed_type": "",
+    "default_filament_profile": [
+        "Generic PLA @System"
+    ],
+    "default_print_profile": "0.20mm Standard @MyKlipper",
+    "deretraction_speed": [
+        "50"
+    ],
+    "disable_m73": "0",
+    "emit_machine_limits_to_gcode": "0",
+    "enable_filament_ramming": "1",
+    "enable_long_retraction_when_cut": "0",
+    "extra_loading_move": "-2",
+    "extruder_clearance_height_to_lid": "140",
+    "extruder_clearance_height_to_rod": "36",
+    "extruder_clearance_radius": "65",
+    "extruder_colour": [
+        "#FCE94F"
+    ],
+    "extruder_offset": [
+        "0x0"
+    ],
+    "fan_kickstart": "0",
+    "fan_speedup_overhangs": "1",
+    "fan_speedup_time": "0",
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "head_wrap_detect_zone": [],
+    "high_current_on_filament_swap": "0",
+    "host_type": "octoprint",
+    "inherits": "MyKlipper 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";AFTER_LAYER_CHANGE\n;[layer_z]",
+    "long_retractions_when_cut": [
+        "0"
+    ],
+    "machine_end_gcode": "; --- 1. Safe Retract ---\nM83 ; Relative extrusion\nG1 E-3 F300 ; Retract to relieve pressure in the Orbiter\n\n; --- 2. Turn off Heaters and Fans ---\nM104 S0 ; Turn off extruder\nM140 S0 ; Turn off bed\nM107 ; Turn off part cooling fan\n\n; --- 3. Move Nozzle Away ---\nG91 ; Relative positioning\nG1 Z5 F3000 ; Lift Z up by 5mm to clear the print\nG90 ; Absolute positioning\n\n; --- 4. Present the Print ---\nG1 X340 Y340 F6000 ; Move toolhead to the back corner (Adjust if needed for Lynx 350)\n\n; --- 5. Final Cleanup ---\nBED_MESH_CLEAR\nM84 X Y E ; Disable steppers\nM117 Print Complete",
+    "machine_load_filament_time": "0",
+    "machine_max_acceleration_e": [
+        "5000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "10000",
+        "20000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "5000",
+        "5000"
+    ],
+    "machine_max_acceleration_travel": [
+        "20000",
+        "20000"
+    ],
+    "machine_max_acceleration_x": [
+        "40000",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "40000",
+        "20000"
+    ],
+    "machine_max_acceleration_z": [
+        "1500",
+        "200"
+    ],
+    "machine_max_jerk_e": [
+        "2.5",
+        "2.5"
+    ],
+    "machine_max_jerk_x": [
+        "9",
+        "9"
+    ],
+    "machine_max_jerk_y": [
+        "9",
+        "9"
+    ],
+    "machine_max_jerk_z": [
+        "0.2",
+        "0.4"
+    ],
+    "machine_max_junction_deviation": [
+        "0.3"
+    ],
+    "machine_max_speed_e": [
+        "25",
+        "25"
+    ],
+    "machine_max_speed_x": [
+        "700",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "700",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "500",
+        "12"
+    ],
+    "machine_min_extruding_rate": [
+        "0",
+        "0"
+    ],
+    "machine_min_travel_rate": [
+        "0",
+        "0"
+    ],
+    "machine_pause_gcode": "PAUSE",
+    "machine_start_gcode": "; --- 1. Initial Setup ---\nSET_GCODE_OFFSET Z=0 \nG90 ; Absolute positioning\nM83 ; Extruder relative mode\n\n; --- 2. Pre-heat nozzle (softens plastic) and Heat Bed Fully ---\nM104 S150 \nM117 Heating Bed...\nM190 S[bed_temperature_initial_layer_single]\n\n; --- 3. True Home (Done hot for Cartographer accuracy) ---\nM117 Homing Axes...\nG28\n\n; --- 4. Tram the Bed (Using Z_TILT for your 3-motor setup) ---\nM117 Adjusting Z-Tilt...\nZ_TILT_ADJUST\n\n; --- 5. Re-home Z (Crucial: The gantry moved during tramming) ---\nG28 Z\n\n; --- 6. Bed Mesh Calibration (The fast Cartographer sweep) ---\nM117 Scanning Bed...\nBED_MESH_CALIBRATE ADAPTIVE=1 \n\nSKEW_PROFILE LOAD=lynx_350\n\n; --- 7. Move to the new purge start position (X10 Y10) ---\nG1 X10 Y10 Z5 F6000\n\n; --- 8. Final Extruder Heat (With +/- 5 degree buffer) ---\nM117 Heating Extruder...\nSET_HEATER_TEMPERATURE HEATER=extruder TARGET=[nozzle_temperature_initial_layer]\nTEMPERATURE_WAIT SENSOR=extruder MINIMUM={nozzle_temperature_initial_layer[0] - 5} MAXIMUM={nozzle_temperature_initial_layer[0] + 5}\n\nM117 Heat Soaking (60s)...\nG4 P60000 ; Dwell for 60 seconds\n\n; --- 9. Purge Line ---\nM117 Purging...\nG1 Z0.23 F240      ; Drop down to first layer height\nG92 E0             ; Reset extruder distance\nG1 X120 E15 F1500  ; Draw the first line from X10 out to X110\nG1 Y10.4 F5000     ; Move slightly over to Y10.4\nG1 X10 E15 F1200   ; Draw the second line back to X10\nG92 E0             ; Reset extruder again\nG1 Z2.0 F3000      ; Lift nozzle to clear the purge puddle\n\n; --- 10. Ready to Print ---\nM117 Printing!",
+    "machine_tool_change_time": "0",
+    "machine_unload_filament_time": "0",
+    "manual_filament_change": "0",
+    "max_layer_height": [
+        "0.32"
+    ],
+    "max_resonance_avoidance_speed": "120",
+    "min_layer_height": [
+        "0.08"
+    ],
+    "min_resonance_avoidance_speed": "70",
+    "name": "Lynx-350",
+    "nozzle_diameter": [
+        "0.4"
+    ],
+    "nozzle_height": "2.5",
+    "nozzle_hrc": "0",
+    "nozzle_type": "hardened_steel",
+    "nozzle_volume": "0",
+    "parking_pos_retraction": "92",
+    "pellet_modded_printer": "0",
+    "preferred_orientation": "0",
+    "printable_area": [
+        "-10x0",
+        "340x0",
+        "340x340",
+        "-10x340"
+    ],
+    "printable_height": "350",
+    "printer_model": "Generic Klipper Printer",
+    "printer_notes": "",
+    "printer_settings_id": "Lynx-350",
+    "printer_structure": "undefine",
+    "printer_technology": "FFF",
+    "printer_variant": "0.4",
+    "printhost_authorization_type": "key",
+    "printhost_ssl_ignore_revoke": "0",
+    "printing_by_object_gcode": "",
+    "purge_in_prime_tower": "1",
+    "resonance_avoidance": "0",
+    "retract_before_wipe": [
+        "20%"
+    ],
+    "retract_length_toolchange": [
+        "2"
+    ],
+    "retract_lift_above": [
+        "0"
+    ],
+    "retract_lift_below": [
+        "0"
+    ],
+    "retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "retract_restart_extra": [
+        "0.08"
+    ],
+    "retract_restart_extra_toolchange": [
+        "0"
+    ],
+    "retract_when_changing_layer": [
+        "0"
+    ],
+    "retraction_distances_when_cut": [
+        "18"
+    ],
+    "retraction_length": [
+        "0.4"
+    ],
+    "retraction_minimum_travel": [
+        "2"
+    ],
+    "retraction_speed": [
+        "50"
+    ],
+    "scan_first_layer": "0",
+    "silent_mode": "0",
+    "single_extruder_multi_material": "1",
+    "support_air_filtration": "1",
+    "support_chamber_temp_control": "1",
+    "support_multi_bed_types": "1",
+    "template_custom_gcode": "",
+    "thumbnails": "48x48/PNG,300x300/PNG",
+    "thumbnails_format": "PNG",
+    "time_cost": "0",
+    "time_lapse_gcode": "",
+    "travel_slope": [
+        "3"
+    ],
+    "upward_compatible_machine": [],
+    "use_firmware_retraction": "0",
+    "use_relative_e_distances": "1",
+    "version": "2.3.0.3",
+    "wipe": [
+        "0"
+    ],
+    "wipe_distance": [
+        "1"
+    ],
+    "z_hop": [
+        "0.4"
+    ],
+    "z_hop_types": [
+        "Normal Lift"
+    ],
+    "z_offset": "0"
+}

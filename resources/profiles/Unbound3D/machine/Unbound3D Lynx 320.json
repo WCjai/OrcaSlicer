@@ -8,5 +8,5 @@
     "bed_model": "Unbound3D_Lynx320_bed.stl",
     "bed_texture": "Unbound3D_Lynx320_bed_texture.svg",
     "hotend_model": "",
-    "default_materials": "eSUN PLA+ @Unbound3D;eSUN PA-CF @Unbound3D;Generic TPU @Unbound3D;Bambu PETG-CF @Unbound3D"
+    "default_materials": "eSUN PLA+ @Unbound3D;eSUN PA-CF @Unbound3D;Generic TPU @Unbound3D;Bambu PETG-CF Lynx 320 @Unbound3D"
 }

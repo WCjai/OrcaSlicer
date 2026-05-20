@@ -1,0 +1,13 @@
+{
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle"
+    ],
+    "filament_settings_id": [
+        "Lynx350 Numaker ASA"
+    ],
+    "from": "User",
+    "inherits": "Generic ASA @System",
+    "is_custom_defined": "0",
+    "name": "Lynx350 Numaker ASA",
+    "version": "2.3.1.10"
+}

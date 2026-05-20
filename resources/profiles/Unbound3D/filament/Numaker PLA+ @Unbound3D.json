@@ -6,20 +6,77 @@
     "filament_id": "GFL15",
     "setting_id": "GFS15",
     "instantiation": "true",
-    "filament_type": ["PLA"],
-    "adaptive_pressure_advance": ["1"],
-    "compatible_printers": ["Unbound3D Lynx 320 0.4 nozzle"],
-    "cool_plate_temp": ["50"],
-    "cool_plate_temp_initial_layer": ["50"],
-    "enable_pressure_advance": ["1"],
-    "eng_plate_temp_initial_layer": ["50"],
-    "filament_flow_ratio": ["1.01"],
-    "filament_max_volumetric_speed": ["18"],
-    "filament_settings_id": ["Numaker PLA+ @Unbound3D"],
-    "pressure_advance": ["0.064"],
-    "slow_down_layer_time": ["0"],
-    "supertack_plate_temp": ["50"],
-    "supertack_plate_temp_initial_layer": ["50"],
-    "textured_cool_plate_temp": ["50"],
-    "textured_cool_plate_temp_initial_layer": ["50"]
+    "filament_type": [
+        "PLA"
+    ],
+    "adaptive_pressure_advance": [
+        "1"
+    ],
+    "compatible_printers": [
+        "Unbound3D Lynx 320 0.4 nozzle",
+        "Unbound3D Lynx 350 0.4 nozzle"
+    ],
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "50"
+    ],
+    "filament_flow_ratio": [
+        "1.01"
+    ],
+    "filament_max_volumetric_speed": [
+        "18"
+    ],
+    "filament_settings_id": [
+        "Numaker PLA+ @Unbound3D"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "slow_down_layer_time": [
+        "0"
+    ],
+    "supertack_plate_temp": [
+        "50"
+    ],
+    "supertack_plate_temp_initial_layer": [
+        "50"
+    ],
+    "textured_cool_plate_temp": [
+        "50"
+    ],
+    "textured_cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "additional_cooling_fan_speed": [
+        "75"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "70"
+    ],
+    "full_fan_speed_layer": [
+        "1"
+    ],
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "slow_down_for_layer_cooling": [
+        "0"
+    ],
+    "slow_down_min_speed": [
+        "0"
+    ]
 }

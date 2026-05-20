@@ -46,9 +46,12 @@ if "%1"=="slicer" (
 echo "building deps.."
 
 echo on
+REM Clear any stale generator cache to avoid "generator mismatch" errors
+if exist CMakeCache.txt del /q CMakeCache.txt
+if exist CMakeFiles rmdir /s /q CMakeFiles
 REM Set minimum CMake policy to avoid <3.5 errors
 set CMAKE_POLICY_VERSION_MINIMUM=3.5
-cmake ../ -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=%build_type%
+cmake ../ -G "Visual Studio 18 2026" -A x64 -DCMAKE_BUILD_TYPE=%build_type%
 cmake --build . --config %build_type% --target deps -- -m
 @echo off
 
@@ -61,8 +64,11 @@ mkdir %build_dir%
 cd %build_dir%
 
 echo on
+REM Clear any stale generator cache to avoid "generator mismatch" errors
+if exist CMakeCache.txt del /q CMakeCache.txt
+if exist CMakeFiles rmdir /s /q CMakeFiles
 set CMAKE_POLICY_VERSION_MINIMUM=3.5
-cmake .. -G "Visual Studio 17 2022" -A x64 -DORCA_TOOLS=ON %SIG_FLAG% -DCMAKE_BUILD_TYPE=%build_type%
+cmake .. -G "Visual Studio 18 2026" -A x64 -DORCA_TOOLS=ON %SIG_FLAG% -DCMAKE_BUILD_TYPE=%build_type%
 cmake --build . --config %build_type% --target ALL_BUILD -- -m
 @echo off
 cd ..

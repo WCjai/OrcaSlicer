@@ -1224,15 +1224,22 @@ wxArrayString CreateFilamentPresetDialog::get_filament_preset_choices()
 
     for (std::pair<std::string, Preset*> filament_presets : m_all_presets_map) {
         Preset *preset = filament_presets.second;
-        auto    inherit = preset->config.option<ConfigOptionString>("inherits");
+        // For "Create Based on": we want ROOT templates — i.e. presets whose
+        // parent is NOT itself present in the map.  When a preset has no
+        // inherits value it is already a root.  When it inherits from something
+        // that IS in the map (e.g. a vendor override that lives beside its
+        // system base) skip it so we only offer the canonical base.
+        auto inherit = preset->config.option<ConfigOptionString>("inherits");
         if (inherit && !inherit->value.empty()) {
-            BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << " inherit user preset is:" << preset->name << " and inherits is: " << inherit->value;
-            continue;
+            if (m_all_presets_map.find(inherit->value) != m_all_presets_map.end()) {
+                BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << " skip – parent in map: " << preset->name;
+                continue;
+            }
         }
         auto fila_type = preset->config.option<ConfigOptionStrings>("filament_type");
         if (!fila_type || fila_type->values.empty() || type_name != fila_type->values[0]) continue;
         m_filament_choice_map[preset->filament_id].push_back(preset);
-        BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << " base user preset is:" << preset->name;
+        BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << " root template: " << preset->name;
     }
 
     int suffix = 0;
@@ -1369,14 +1376,17 @@ void CreateFilamentPresetDialog::get_filament_presets_by_machine()
                     inherit_preset             = preset_bundle->filaments.find_preset(inherits_value, false, true);
                 }
 
-                ConfigOptionStrings* filament_types;
-                if (!inherit_preset) {
-                    filament_types = dynamic_cast<ConfigOptionStrings*>(preset->config.option("filament_type"));
-                } else {
+                ConfigOptionStrings* filament_types = nullptr;
+                if (inherit_preset) {
                     filament_types = dynamic_cast<ConfigOptionStrings*>(inherit_preset->config.option("filament_type"));
                 }
+                if (!filament_types || filament_types->values.empty()) {
+                    // Fall back to the leaf preset's own filament_type when the
+                    // parent doesn't provide it (or isn't loaded).
+                    filament_types = dynamic_cast<ConfigOptionStrings*>(preset->config.option("filament_type"));
+                }
 
-                if (filament_types && filament_types->values.empty())
+                if (!filament_types || filament_types->values.empty())
                     continue;
                 const std::string filament_type = filament_types->values[0];
                 if (filament_type != type_name) {
@@ -1410,14 +1420,17 @@ void CreateFilamentPresetDialog::get_filament_presets_by_machine()
                 std::string inherits_value = inherit->value;
                 inherit_preset             = preset_bundle->filaments.find_preset(inherits_value, false, true);
             }
-            ConfigOptionStrings *filament_types;
-            if (!inherit_preset) {
-                filament_types = dynamic_cast<ConfigOptionStrings *>(preset->config.option("filament_type"));
-            } else {
+            ConfigOptionStrings *filament_types = nullptr;
+            if (inherit_preset) {
                 filament_types = dynamic_cast<ConfigOptionStrings *>(inherit_preset->config.option("filament_type"));
             }
+            if (!filament_types || filament_types->values.empty()) {
+                // Fall back to the leaf preset's own filament_type when the
+                // parent doesn't provide it (or isn't loaded).
+                filament_types = dynamic_cast<ConfigOptionStrings *>(preset->config.option("filament_type"));
+            }
 
-            if (filament_types && filament_types->values.empty()) continue;
+            if (!filament_types || filament_types->values.empty()) continue;
             const std::string filament_type = filament_types->values[0];
             if (filament_type != type_name) {
                 BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << " preset type is not selected type and preset name is: " << preset->name;
@@ -1464,6 +1477,9 @@ void CreateFilamentPresetDialog::get_all_filament_presets()
         m_all_presets_map[filament_preset_name] = filament_preset;
     }
     // global filament presets
+    // We intentionally load ALL system presets regardless of is_visible so that
+    // every filament template is available in the Create-Filament dialog even
+    // before the user has set up their printer through the Configuration Wizard.
     PresetBundle * preset_bundle = wxGetApp().preset_bundle;
     const std::deque<Preset> &temp_filament_presets = preset_bundle->filaments.get_presets();
     for (const Preset& preset : temp_filament_presets) {
@@ -1471,7 +1487,6 @@ void CreateFilamentPresetDialog::get_all_filament_presets()
         auto filament_type = preset.config.option<ConfigOptionStrings>("filament_type");
         if (filament_type && filament_type->values.size())
             m_system_filament_types_set.insert(filament_type->values[0]);
-        if (!preset.is_visible) continue;
         std::string filament_preset_name        = preset.name;
         Preset *filament_preset                 = new Preset(preset);
         m_all_presets_map[filament_preset_name] = filament_preset;

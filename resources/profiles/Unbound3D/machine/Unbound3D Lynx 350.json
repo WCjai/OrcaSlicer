@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Unbound3D Lynx 350",
+    "model_id": "unbound3d_lynx_350",
+    "nozzle_diameter": "0.4",
+    "machine_tech": "FFF",
+    "family": "Unbound3D",
+    "bed_model": "Custom_350_bed.stl",
+    "bed_texture": "Unbound3D_Lynx320_bed_texture.svg",
+    "hotend_model": "",
+    "default_materials": "eSUN PLA+ @Unbound3D;eSUN PA-CF @Unbound3D;Generic TPU @Unbound3D;Bambu PETG-CF Lynx 320 @Unbound3D"
+}

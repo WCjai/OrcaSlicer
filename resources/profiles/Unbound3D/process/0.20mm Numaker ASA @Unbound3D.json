@@ -1,0 +1,31 @@
+{
+    "brim_type": "outer_only",
+    "default_acceleration": "7000",
+    "initial_layer_line_width": "0.5",
+    "inner_wall_line_width": "0.45",
+    "internal_solid_infill_line_width": "0.42",
+    "line_width": "0.42",
+    "outer_wall_line_width": "0.42",
+    "outer_wall_speed": "100",
+    "role_based_wipe_speed": "0",
+    "seam_slope_inner_walls": "1",
+    "seam_slope_min_length": "15",
+    "seam_slope_start_height": "10%",
+    "sparse_infill_density": "10%",
+    "sparse_infill_line_width": "0.45",
+    "sparse_infill_pattern": "rectilinear",
+    "top_shell_thickness": "1",
+    "top_surface_line_width": "0.42",
+    "travel_acceleration": "15000",
+    "wall_sequence": "inner-outer-inner wall",
+    "wipe_speed": "0",
+    "type": "process",
+    "name": "0.20mm Numaker ASA @Unbound3D",
+    "from": "system",
+    "instantiation": "true",
+    "setting_id": "GP021",
+    "inherits": "0.20mm Standard @Unbound3D",
+    "compatible_printers": [
+        "Unbound3D Lynx 350 0.4 nozzle"
+    ]
+}
